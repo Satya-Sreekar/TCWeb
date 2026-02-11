@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Manufacturing Enterprise AI Transformation Case Study | Telcomet</title>
+    <meta name="description"
+        content="How Telcomet helped a manufacturing enterprise achieve 40% reduction in downtime through AI-led digital transformation." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+    <div x-data="{mobileNavOpen:false}" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-gray-900/50 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="logo1.png" alt="Telcomet"
+                            class="h-10 w-auto" />
+                        <div class="flex flex-col leading-tight"><span
+                                class="text-sm font-semibold text-brand-600">TELCOMET</span><span
+                                class="text-xs text-gray-600">AI-Led Digital Transformation</span></div>
+                    </a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="ai-digital-transformation.html" class="text-brand-600 font-semibold">AI Solutions</a>
+                        <a href="index.html#services" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="index.html#contact" class="text-gray-700 hover:text-brand-600">Contact</a>
+                    </nav>
+                    <a href="index.html#contact"
+                        class="hidden lg:inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+                        to an Expert</a>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 pt-16">
+            <section class="bg-gradient-to-br from-gray-50 to-white border-b border-gray-200 py-12 lg:py-16">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <a href="ai-digital-transformation.html"
+                        class="inline-flex items-center gap-2 text-sm text-brand-600 hover:text-brand-700 mb-6">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        Back to AI Transformation
+                    </a>
+                    <div
+                        class="inline-block bg-brand-100 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+                        CASE STUDY</div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Manufacturing Enterprise
+                    </h1>
+                    <p class="text-xl text-gray-700">AI-driven transformation for multi-plant operations delivering
+                        measurable improvements across manufacturing workflows</p>
+                </div>
+            </section>
+
+            <section class="py-12 bg-white">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 mb-12">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            A large manufacturing enterprise engaged Telcomet to digitally transform its multi-plant
+                            operations using AI. The organization faced disconnected production systems, manual planning
+                            processes, limited operational visibility, and rising costs as production volumes increased.
+                            Telcomet introduced AI-driven transformation to unify IT and operational technology data,
+                            optimize production planning, and embed predictive intelligence across manufacturing
+                            workflows. The objective was to improve efficiency, reduce downtime, and enable scalable
+                            production growth while maintaining quality, safety, and cost control across geographically
+                            distributed facilities.
+                        </p>
+                    </div>
+
+                    <div class="mb-12" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Industry Challenge</h2>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Disconnected Production Systems
+                                        </h3>
+                                        <p class="text-sm text-gray-600">Production systems across plants leading to
+                                            inconsistent data and reporting</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Manual Planning & Scheduling</h3>
+                                        <p class="text-sm text-gray-600">Resulting in delays and inefficient resource
+                                            utilization</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Limited Operational Visibility</h3>
+                                        <p class="text-sm text-gray-600">Poor visibility into operations, equipment
+                                            performance, and supply chain risks</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Scaling Challenges</h3>
+                                        <p class="text-sm text-gray-600">Increased production meant higher labor and
+                                            operational costs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-12" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">AI-Led Transformation Approach</h2>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
+                                        1</div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">AI Maturity Assessment</h3>
+                                        <p class="text-gray-700">Comprehensive assessment across IT, OT, and data
+                                            infrastructure to identify high-impact AI opportunities</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
+                                        2</div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">AI-Powered Process Re-engineering
+                                        </h3>
+                                        <p class="text-gray-700">Redesigned production planning, inventory, and quality
+                                            control workflows with AI integration</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
+                                        3</div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">System Integration</h3>
+                                        <p class="text-gray-700">Integrated AI analytics with ERP and shop-floor systems
+                                            for seamless data flow</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
+                                        4</div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Predictive Maintenance Models</h3>
+                                        <p class="text-gray-700">Implemented machine learning models to anticipate
+                                            equipment failures and optimize maintenance scheduling</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
+                                        5</div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Real-Time Performance Dashboards
+                                        </h3>
+                                        <p class="text-gray-700">AI-enabled dashboards providing real-time plant
+                                            monitoring and operational insights</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-12" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Business Impact & ROI</h2>
+                        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">40%</div>
+                                <p class="font-semibold text-gray-900">Reduction in Unplanned Downtime</p>
+                            </div>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">25%</div>
+                                <p class="font-semibold text-gray-900">Improvement in Production Efficiency</p>
+                            </div>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">30%</div>
+                                <p class="font-semibold text-gray-900">Reduction in Inventory Holding Costs</p>
+                            </div>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">100%</div>
+                                <p class="font-semibold text-gray-900">Faster Supply Chain Response</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 bg-brand-50 rounded-xl p-6 border border-brand-200">
+                            <h3 class="font-semibold text-gray-900 mb-2">Additional Benefits</h3>
+                            <p class="text-gray-700">Ability to scale production volumes without increasing workforce
+                                size, improving margins and operational resilience</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl p-8 text-white"
+                        data-aos="fade-up">
+                        <h2 class="text-2xl font-bold mb-4">Final Outcome</h2>
+                        <p class="leading-relaxed">
+                            AI-led transformation delivered measurable improvements across manufacturing operations.
+                            Unplanned downtime was significantly reduced through predictive maintenance, production
+                            efficiency improved, and inventory levels were optimized using intelligent forecasting.
+                            Leadership gained real-time visibility into plant performance, enabling faster corrective
+                            actions and better capacity planning. The organization successfully scaled production
+                            volumes without proportional increases in labor or overhead, improving margins and
+                            operational resilience. AI became a foundational capability supporting continuous
+                            improvement, operational stability, and long-term manufacturing excellence.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <a href="ai-digital-transformation.html"
+                            class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                            Back to AI Digital Transformation
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-brand-50 py-12 border-t border-brand-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Manufacturing Operations?
+                    </h2>
+                    <p class="text-gray-700 mb-6">Let's discuss how AI can optimize your production and drive measurable
+                        ROI</p>
+                    <a href="index.html#contact"
+                        class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">Schedule
+                        a Consultation</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-900 text-gray-300 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Head Office</h3>
+                        <p class="text-sm">B-8, Indian Airlines Colony,<br />Prakash Nagar, Begumpet,<br />Hyderabad</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Reach Us</h3>
+                        <p class="text-sm"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-400">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+                        <div class="flex flex-wrap gap-3 text-sm"><a href="index.html"
+                                class="hover:text-brand-400">Home</a><a href="about.html"
+                                class="hover:text-brand-400">About</a><a href="ai-digital-transformation.html"
+                                class="hover:text-brand-400">AI Solutions</a></div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true })</script>
+</body>
+
+</html>

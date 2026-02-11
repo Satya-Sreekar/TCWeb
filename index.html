@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Telcomet | AI-Led Digital Transformation & IT Solutions</title>
+  <meta name="description"
+    content="Telcomet delivers AI-led digital transformation, IT staffing, managed IT, cloud, data center, security, and software solutions for enterprises across India and beyond." />
+  <link rel="icon" type="image/jpeg" href="logo1.png" />
+
+  <!-- Tailwind CSS (CDN build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              "system-ui",
+              "-apple-system",
+              "BlinkMacSystemFont",
+              "Segoe UI",
+              "Roboto",
+              "sans-serif",
+            ],
+          },
+          colors: {
+            brand: {
+              50: "#fff7ed",
+              100: "#ffedd5",
+              200: "#fed7aa",
+              300: "#fdba74",
+              400: "#fb923c",
+              500: "#f97316",
+              600: "#ea580c",
+              700: "#c2410c",
+              800: "#9a3412",
+              900: "#7c2d12",
+            },
+          },
+          boxShadow: {
+            soft: "0 18px 60px rgba(15,23,42,0.45)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Alpine.js for lightweight interactivity -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- AOS (Animate On Scroll) for scroll animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-400 selection:text-white">
+  <!-- Page wrapper -->
+  <div x-data="{ mobileNavOpen: false }" @keydown.escape.window="mobileNavOpen = false"
+    class="min-h-screen flex flex-col">
+    <!-- Backdrop for mobile nav -->
+    <div x-show="mobileNavOpen" x-transition.opacity class="fixed inset-0 z-30 bg-white/30 backdrop-blur-sm lg:hidden"
+      @click="mobileNavOpen = false"></div>
+
+    <!-- Header / Navigation -->
+    <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#top" class="flex items-center">
+            <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
+          </a>
+          <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+            <a href="#hero" class="text-gray-700 hover:text-brand-600">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+            <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+            <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI Transformation</a>
+            <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+          </nav>
+          <div class="hidden items-center gap-3 lg:flex">
+            <a href="contact.html"
+              class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+              to an Expert</a>
+          </div>
+          <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+            <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+          <nav class="flex flex-col gap-2">
+            <a href="#hero" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+              @click="mobileNavOpen=false">Home</a>
+            <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+              @click="mobileNavOpen=false">About</a>
+            <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+              @click="mobileNavOpen=false">Services</a>
+            <a href="ai-digital-transformation.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+              @click="mobileNavOpen=false">AI Transformation</a>
+            <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+              @click="mobileNavOpen=false">Case Studies</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="top" class="flex-1 pt-16">
+      <!-- Hero - Minimal -->
+      <section id="hero"
+        class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50/70">
+        <!-- Decorative background -->
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+          <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/15 blur-3xl"></div>
+          <div class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-400/10 blur-3xl">
+          </div>
+          <div class="pointer-events-none absolute inset-x-0 top-40 flex justify-center">
+            <div class="h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+          </div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          <div class="text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+            <div
+              class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-800 shadow-sm shadow-brand-500/40 mb-6">
+              <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+              AI-Led Digital Transformation Partner
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 leading-tight">
+              Lending a <span class="text-brand-400">Personnel Touch</span>
+              to your <span class="text-brand-600">Digital Transformation</span>.
+            </h1>
+
+            <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-600">
+              Telcomet unifies AI, cloud, data, security, and staffing services to help you
+              modernize faster, scale without friction, and build resilient digital operations.
+            </p>
+
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a href="contact.html"
+                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-white transition-all hover:scale-105">
+                Book a Strategy Call
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" class="ml-2 h-4 w-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+
+              <a href="case-studies.html"
+                class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600 transition-colors shadow-sm">
+                Explore Success Stories
+                <span
+                  class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-[10px] text-slate-600 ml-1">3</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro / Snapshot Section -->
+      <section class="py-16 lg:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-2 items-center">
+            <!-- Left: Key Pillars & Metrics -->
+            <div data-aos="fade-right" data-aos-duration="800">
+              <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600 mb-2">
+                Why Telcomet?
+              </p>
+              <h2 class="text-3xl font-semibold text-slate-900 mb-6">
+                Turning complexity into competitive advantage.
+              </h2>
+              <p class="text-slate-600 mb-8 leading-relaxed">
+                From AI readiness to managed IT, we provide the architecture, teams, and strategy tailored to your
+                industry and scale.
+              </p>
+
+              <dl class="grid grid-cols-3 gap-6 text-sm text-slate-600 mb-8 border-y border-slate-100 py-6">
+                <div>
+                  <dt class="font-semibold text-slate-900 mb-1">Founded</dt>
+                  <dd>2017 · Hyderabad HQ</dd>
+                </div>
+                <div>
+                  <dt class="font-semibold text-slate-900 mb-1">Presence</dt>
+                  <dd>India & Middle East</dd>
+                </div>
+                <div>
+                  <dt class="font-semibold text-slate-900 mb-1">Focus</dt>
+                  <dd>People-centric IT & AI</dd>
+                </div>
+              </dl>
+
+              <div class="flex flex-col gap-3 text-sm text-slate-700">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="font-medium">25–40% reduction in operational costs</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="font-medium">2–3x faster decision-making cycles</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Snapshot Card -->
+            <div class="relative" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+              <!-- Decorative blob -->
+              <div class="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-brand-500/5 blur-3xl"></div>
+
+              <div
+                class="relative rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-50 p-8 shadow-xl shadow-slate-200/50">
+                <div class="flex items-center justify-between gap-4 mb-6">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600/80">
+                      Snapshot
+                    </p>
+                    <p class="mt-1 text-lg font-bold text-slate-900">
+                      Unified IT & AI services
+                    </p>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-1 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+                    <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-500"></span>
+                    Trusted Partner
+                  </div>
+                </div>
+
+                <dl class="grid grid-cols-3 gap-4">
+                  <div class="rounded-2xl bg-white p-4 border border-slate-100 shadow-sm">
+                    <dt class="text-[0.65rem] uppercase tracking-wide text-slate-500 font-semibold">
+                      AI Programs
+                    </dt>
+                    <dd class="mt-1 text-xl font-bold text-slate-900">
+                      30–50%
+                    </dd>
+                    <p class="mt-1 text-[0.7rem] leading-tight text-slate-500">
+                      process efficiency gains
+                    </p>
+                  </div>
+                  <div class="rounded-2xl bg-white p-4 border border-slate-100 shadow-sm">
+                    <dt class="text-[0.65rem] uppercase tracking-wide text-slate-500 font-semibold">
+                      Industries
+                    </dt>
+                    <dd class="mt-1 text-xl font-bold text-slate-900">
+                      10+
+                    </dd>
+                    <p class="mt-1 text-[0.7rem] leading-tight text-slate-500">
+                      healthcare, mfg, logistics
+                    </p>
+                  </div>
+                  <div class="rounded-2xl bg-white p-4 border border-slate-100 shadow-sm">
+                    <dt class="text-[0.65rem] uppercase tracking-wide text-slate-500 font-semibold">
+                      Satisfaction
+                    </dt>
+                    <dd class="mt-1 text-xl font-bold text-slate-900">
+                      +35%
+                    </dd>
+                    <p class="mt-1 text-[0.7rem] leading-tight text-slate-500">
+                      average NPS uplift
+                    </p>
+                  </div>
+                </dl>
+
+                <div class="mt-6 rounded-2xl bg-slate-900 p-5 text-white">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-brand-400 mb-2">Our Method</p>
+                  <p class="text-sm font-medium leading-relaxed">
+                    Telcomet blends people, process, and platforms to deliver end-to-end transformation.
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span
+                      class="inline-flex items-center rounded bg-white/10 px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/20">AI
+                      Readiness</span>
+                    <span
+                      class="inline-flex items-center rounded bg-white/10 px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/20">Cloud
+                      & Data</span>
+                    <span
+                      class="inline-flex items-center rounded bg-white/10 px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/20">Security</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="border-b border-slate-200 bg-slate-50/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
+              About Telcomet
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">
+              We are a software development & IT solutions company delivering
+              splendid business outcomes across the globe.
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">
+              People are our passion. Established in 2017 in Hyderabad, Telcomet has grown
+              steadily into a trusted provider of IT staffing, managed IT, cloud, data
+              management, software, hardware, and security solutions.
+            </p>
+
+            <div class="mt-8">
+              <a href="about.html"
+                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-white">
+                Learn More About Us
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" class="ml-2 h-4 w-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="border-b border-slate-200 bg-gradient-to-b from-white via-slate-50 to-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
+              What we offer
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">
+              End-to-end IT & AI services designed for measurable business impact.
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">
+              Whether you are scaling digital products, modernizing infrastructure, or building
+              AI-native operations, Telcomet provides a single partner across strategy,
+              execution, and managed services.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3 text-[0.7rem] text-slate-600 justify-center">
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                IT Staffing Services
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                Managed IT Services
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                Data Management & Centers
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                Software & Hardware Solutions
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                Security & Cloud Computing
+              </span>
+            </div>
+
+            <div class="mt-8">
+              <a href="services.html"
+                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-white">
+                View All Services
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" class="ml-2 h-4 w-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Digital Transformation -->
+      <section id="ai" class="border-b border-slate-200 bg-gradient-to-br from-brand-50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">
+              Digital Transformation with AI
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">
+              From fragmented systems to <span class="text-brand-600">AI-orchestrated operations</span>
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">
+              Most organizations operate with disconnected systems, manual decision-making, and
+              limited visibility. Telcomet designs AI programs that unify data, re-engineer
+              processes, and embed intelligence across your value chain—delivering measurable
+              ROI and sustainable growth.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3 text-[0.7rem] text-slate-600 justify-center">
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                AI Readiness Assessment
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                Process Re-engineering
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                25-40% Cost Reduction
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1 border border-slate-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                Security-First Architecture
+              </span>
+            </div>
+
+            <div class="mt-8">
+              <a href="ai-digital-transformation.html"
+                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-white">
+                Learn More About AI Transformation
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" class="ml-2 h-4 w-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies - Simplified -->
+      <section id="case-studies" class="border-b border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">
+              Succces Stories
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">
+              Real-world impact across industries.
+            </h2>
+
+            <div class="mt-10">
+              <a href="case-studies.html"
+                class="inline-flex items-center justify-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700">
+                View All Case Studies
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients -->
+      <section class="border-b border-slate-200 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
+              Our Clients
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-900">
+              Trusted by enterprises across India & the Middle East.
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-slate-600">
+              Partnering with leaders in manufacturing, healthcare, BFSI, and logistics to drive digital excellence.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-14 opacity-80" data-aos="fade-up"
+            data-aos-duration="800" data-aos-delay="100">
+            <img src="clients/16655087071.png" alt="Client Logo"
+              class="h-8 sm:h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+            <img src="clients/16655087072.png" alt="Client Logo"
+              class="h-8 sm:h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+            <img src="clients/16655087073.png" alt="Client Logo"
+              class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+            <img src="clients/16655087074.png" alt="Client Logo"
+              class="h-8 sm:h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+            <img src="clients/16655087075.png" alt="Client Logo"
+              class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+            <img src="clients/1665659792CloudAce-logo.jpg" alt="CloudAce"
+              class="h-8 sm:h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 mix-blend-multiply">
+            <img src="clients/1665659836jubilant-logo.png" alt="Jubilant"
+              class="h-8 sm:h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-slate-50/95">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <p class="text-[0.7rem] sm:text-xs text-slate-500">
+            © 2026 Telcomet. All rights reserved. Enhancing performance through people, process,
+            and platforms.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 text-[0.7rem] sm:text-xs text-slate-500">
+            <a href="#hero" class="hover:text-slate-900">Home</a>
+            <a href="about.html" class="hover:text-slate-900">About us</a>
+            <a href="services.html" class="hover:text-slate-900">Services</a>
+            <a href="ai-digital-transformation.html" class="hover:text-slate-900">AI Transformation</a>
+            <a href="case-studies.html" class="hover:text-slate-900">Case Studies</a>
+            <a href="contact.html" class="hover:text-slate-900">Contact us</a>
+            <button type="button"
+              class="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-100 px-2 py-1 text-[0.65rem] text-slate-700 hover:bg-slate-100"
+              onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+              Scroll to top
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" class="h-3 w-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- App script -->
+  <script src="./app.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.AOS) {
+        AOS.init({
+          once: true,
+          offset: 80,
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

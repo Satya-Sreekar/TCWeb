@@ -1,0 +1,13 @@
+{
+  "name": "telcomet-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static, framework-enhanced marketing site for Telcomet with Tailwind, Alpine.js and AOS.",
+  "scripts": {
+    "start": "npx live-server --port=4173 --open=index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
+

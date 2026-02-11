@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Our Services | Telcomet</title>
+    <meta name="description"
+        content="Explore Telcomet's comprehensive IT and AI services - from staffing to managed IT, cloud solutions, data management, security, and digital transformation." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-400 selection:text-white">
+    <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-white/30 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+
+        <!-- Header -->
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
+                    </a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+                    </nav>
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+                            to an Expert</a>
+                    </div>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Home</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">About</a>
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Services</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="flex-1 pt-16">
+            <!-- Hero Section -->
+            <section
+                class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+                <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/15 blur-3xl"></div>
+                    <div
+                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-400/10 blur-3xl">
+                    </div>
+                </div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-800">
+                            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-400"></span>Our Services
+                        </div>
+                        <h1 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
+                            End-to-end <span class="text-brand-400">IT & AI Services</span> designed for measurable
+                            business impact
+                        </h1>
+                        <p class="mt-5 text-base sm:text-lg text-slate-600">
+                            Whether you are scaling digital products, modernizing infrastructure, or building AI-native
+                            operations,
+                            Telcomet provides a single partner across strategy, execution, and managed services.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Grid -->
+            <section class="border-b border-slate-200 bg-gradient-to-b from-white via-slate-50 to-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="flex flex-wrap gap-3 text-[0.7rem] text-slate-600 justify-center mb-10"
+                        data-aos="fade-up" data-aos-duration="800">
+                        <span class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1">
+                            <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                            AI-led transformation
+                        </span>
+                        <span class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1">
+                            <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                            Managed IT & infra
+                        </span>
+                        <span class="inline-flex items-center gap-1 rounded-full bg-slate-50/70 px-3 py-1">
+                            <span class="h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                            Secure-by-design solutions
+                        </span>
+                    </div>
+
+                    <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3" data-aos="fade-up"
+                        data-aos-duration="800" data-aos-delay="60">
+                        <!-- IT Staffing Solutions -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM5 21a7 7 0 0114 0" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">IT Staffing Services</h3>
+                            <p class="service-body">
+                                We strongly believe our talent is in finding yours. Telcomet provides permanent,
+                                contract, and project-based staffing that strengthens team dynamics and accelerates
+                                delivery.
+                            </p>
+                            <a href="it-staffing-services.html" class="service-link">Find your next hire</a>
+                        </article>
+
+                        <!-- Managed IT Services -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M4 13h16l-1 8H5l-1-8zM10 4h4l1 5H9l1-5z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Managed IT Services</h3>
+                            <p class="service-body">
+                                End-to-end managed services including infrastructure, monitoring, helpdesk, and
+                                disaster recovery. We keep your environment stable so you can stay focused on
+                                growth.
+                            </p>
+                            <a href="managed-it-services.html" class="service-link">See how we modernize infra</a>
+                        </article>
+
+                        <!-- Data Management Solutions -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 6a8 3 0 0116 0 8 3 0 01-16 0zM4 12a8 3 0 0016 0M4 18a8 3 0 0016 0" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Data Management Solutions</h3>
+                            <p class="service-body">
+                                From collection to storage and retrieval, we design data platforms that ensure
+                                clean, governed, instantly accessible information for analytics and AI.
+                            </p>
+                            <a href="data-management-solutions.html" class="service-link">Explore AI-ready data
+                                strategy</a>
+                        </article>
+
+                        <!-- Data Center Solutions -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 7h18M3 12h18M3 17h18M7 7v10M17 7v10" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Data Center Solutions</h3>
+                            <p class="service-body">
+                                Consolidation, colocation, cloud hosting, and hybrid architectures designed with
+                                scalability, resilience, and cost optimization at the core.
+                            </p>
+                            <a href="data-center-solutions.html" class="service-link">Build modern data centers</a>
+                        </article>
+
+                        <!-- IT Software Solutions -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5 4h14v6H5zM5 14h6v6H5zM15 14h4M15 18h4" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">IT Software Solutions</h3>
+                            <p class="service-body">
+                                Licensing, custom development, and integration services across Microsoft, Oracle,
+                                IBM, Adobe, AutoCAD, Red Hat and more to maximize your software ROI.
+                            </p>
+                            <a href="it-software-solutions.html" class="service-link">Plan your software roadmap</a>
+                        </article>
+
+                        <!-- IT Hardware Solutions -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 6h16v9H4zM9 18h6M10 15v3M14 15v3" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">IT Hardware Solutions</h3>
+                            <p class="service-body">
+                                Desktops, laptops, workstations, thin clients, and peripheral solutions from
+                                leading OEMs—sized and configured for your workloads.
+                            </p>
+                            <a href="it-hardware-solutions.html" class="service-link">Design your hardware stack</a>
+                        </article>
+
+                        <!-- IT Security Services -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">IT Security Services</h3>
+                            <p class="service-body">
+                                Antivirus, endpoint, firewalls, WAF, DLP, SIEM, and zero-trust architectures that
+                                embed security into every layer of your estate.
+                            </p>
+                            <a href="it-security-services.html" class="service-link">Secure your infrastructure</a>
+                        </article>
+
+                        <!-- Cloud Computing Solutions -->
+                        <article class="service-card">
+                            <div class="service-icon bg-brand-500/15 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7 18a4 4 0 010-8 5 5 0 019.5-1.5A3.5 3.5 0 1118 18H7z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Cloud Computing Solutions</h3>
+                            <p class="service-body">
+                                VPS, dedicated and cloud servers, backup, DR, and cloud storage designed for
+                                performance, resilience, and cost efficiency.
+                            </p>
+                            <a href="cloud-computing-solutions.html" class="service-link">Migrate to the cloud</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="border-b border-slate-200 bg-gradient-to-br from-brand-500/10 via-white to-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="text-center" data-aos="zoom-in" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Ready to transform your business?
+                        </h2>
+                        <p class="mt-4 text-sm sm:text-base text-slate-600">Let's discuss how our services can help you
+                            achieve your goals.</p>
+                        <div class="mt-8">
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:bg-brand-600">Get
+                                in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-200 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-900">Head Office</h3>
+                        <p class="mt-3 text-xs text-slate-500">B-8, Indian Airlines Colony,<br />Prakash Nagar,
+                            Begumpet,<br />Hyderabad</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-900">Reach Us</h3>
+                        <p class="mt-3 text-xs text-slate-500"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-600">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-600">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-900">Quick Links</h3>
+                        <div class="mt-3 flex flex-wrap gap-3 text-xs text-slate-500">
+                            <a href="index.html" class="hover:text-brand-600">Home</a>
+                            <a href="about.html" class="hover:text-brand-600">About</a>
+                            <a href="ai-digital-transformation.html" class="hover:text-brand-600">AI Transformation</a>
+                            <a href="case-studies.html" class="hover:text-brand-600">Case Studies</a>
+                            <a href="contact.html" class="hover:text-brand-600">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-slate-200 pt-8 text-center text-xs text-slate-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 })</script>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Case Studies | Telcomet</title>
+    <meta name="description"
+        content="Explore how Telcomet has helped organizations across industries achieve measurable success through AI-led digital transformation." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: [
+                            "system-ui",
+                            "-apple-system",
+                            "BlinkMacSystemFont",
+                            "Segoe UI",
+                            "Roboto",
+                            "sans-serif",
+                        ],
+                    },
+                    colors: {
+                        brand: {
+                            50: "#fff7ed",
+                            100: "#ffedd5",
+                            200: "#fed7aa",
+                            300: "#fdba74",
+                            400: "#fb923c",
+                            500: "#f97316",
+                            600: "#ea580c",
+                            700: "#c2410c",
+                            800: "#9a3412",
+                            900: "#7c2d12",
+                        },
+                    },
+                    boxShadow: {
+                        soft: "0 18px 60px rgba(15,23,42,0.45)",
+                    },
+                },
+            },
+        };
+    </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-400 selection:text-white">
+    <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-white/30 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+
+        <!-- Header -->
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="logo1.png" alt="Telcomet"
+                            class="h-10 w-auto" />
+                    </a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+                    </nav>
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+                            to an Expert</a>
+                    </div>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Home</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">About</a>
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Services</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="flex-1 pt-16">
+            <!-- Hero Section -->
+            <section
+                class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+                <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/15 blur-3xl"></div>
+                    <div
+                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-400/10 blur-3xl">
+                    </div>
+                </div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-800">
+                            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-400"></span>Success Stories
+                        </div>
+                        <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
+                            Real-world results delivered by <span class="text-brand-600 relative inline-block">Telcomet
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 text-brand-200 -z-10"
+                                    viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                                </svg>
+                            </span>
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">
+                            Discover how we've helped organizations across industries achieve measurable success through
+                            AI-led digital transformation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Studies Grid -->
+            <section class="py-16 lg:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid gap-8 lg:grid-cols-3">
+                        <!-- Manufacturing -->
+                        <div class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Manufacturing
+                                    Enterprise</h3>
+                            </div>
+
+                            <p class="text-gray-600 mb-6 font-medium">
+                                Multi-plant operations unified with AI for real-time visibility and predictive
+                                performance.
+                            </p>
+
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Disconnected production systems and manual planning created delays.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Integrated IT and OT data, re-engineered planning and inventory.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Predictive maintenance and live dashboards powered proactive decisions.</span>
+                                </li>
+                            </ul>
+
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-1 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">40%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        unplanned downtime</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">25%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in production efficiency</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        inventory holding costs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Healthcare -->
+                        <div class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Healthcare
+                                    Provider Network</h3>
+                            </div>
+
+                            <p class="text-gray-600 mb-6 font-medium">
+                                Patient-centric operations with AI-driven workflows and unified intelligence.
+                            </p>
+
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Siloed clinical and admin systems strained staff and patient
+                                        experiences.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>AI-powered workflow redesign transformed onboarding, scheduling,
+                                        billing.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Unified patient intelligence platform enabled proactive care planning.</span>
+                                </li>
+                            </ul>
+
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-1 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        admin workload</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">25%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in patient throughput</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">20%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        operational costs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Logistics -->
+                        <div class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Logistics &
+                                    Supply Chain</h3>
+                            </div>
+
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI-optimized routing, fleet utilization, and shipment visibility at scale.
+                            </p>
+
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Fragmented systems across fleet, warehouse, and orders limited
+                                        visibility.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>AI-driven route optimization, demand forecasting, and real-time
+                                        dashboards.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Scalable operations without linear increases in manpower or cost.</span>
+                                </li>
+                            </ul>
+
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-1 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in on-time deliveries</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        transport costs</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">25%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in fleet utilization</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="bg-gradient-to-br from-brand-500 to-brand-600 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center text-white" data-aos="zoom-in">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+                        <p class="text-lg text-brand-50 mb-8 max-w-2xl mx-auto">Let's discuss how our expertise can
+                            drive
+                            measurable ROI and sustainable growth for your organization.</p>
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-brand-600 hover:bg-gray-100 shadow-xl">
+                            Talk to an Expert
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-200 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-900">Head Office</h3>
+                        <p class="mt-3 text-xs text-slate-500">B-8, Indian Airlines Colony,<br />Prakash Nagar,
+                            Begumpet,<br />Hyderabad</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-900">Reach Us</h3>
+                        <p class="mt-3 text-xs text-slate-500"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-600">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-600">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-900">Quick Links</h3>
+                        <div class="mt-3 flex flex-wrap gap-3 text-xs text-slate-500">
+                            <a href="index.html" class="hover:text-brand-600">Home</a>
+                            <a href="about.html" class="hover:text-brand-600">About</a>
+                            <a href="services.html" class="hover:text-brand-600">Services</a>
+                            <a href="ai-digital-transformation.html" class="hover:text-brand-600">AI Transformation</a>
+                            <a href="case-studies.html" class="hover:text-brand-600">Case Studies</a>
+                            <a href="contact.html" class="hover:text-brand-600">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-slate-200 pt-8 text-center text-xs text-slate-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 })</script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

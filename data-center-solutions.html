@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Data Center Solutions | Telcomet</title>
+    <meta name="description"
+        content="Telcomet specializes in providing customized data center solutions for your business needs with future growth in mind." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-slate-950 text-slate-50 antialiased selection:bg-brand-400 selection:text-slate-950">
+    <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-slate-900/70 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+        <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 shadow-soft backdrop-blur-xl">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="logo1.png" alt="Telcomet"
+                            class="h-9 w-auto rounded-md object-contain bg-white/5 p-1.5" />
+                        <div class="flex flex-col leading-tight"><span
+                                class="text-sm font-semibold tracking-wide uppercase text-brand-300">Telcomet</span><span
+                                class="text-xs text-slate-300">AI-Led Digital Transformation</span></div>
+                    </a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-slate-200 hover:text-white">Home</a>
+                        <a href="about.html" class="text-slate-200 hover:text-white">About</a>
+                        <a href="index.html#services" class="text-slate-200 hover:text-white">Services</a>
+                        <a href="index.html#contact" class="text-slate-200 hover:text-white">Contact</a>
+                    </nav>
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <a href="index.html#contact"
+                            class="inline-flex items-center justify-center rounded-full border border-brand-400/40 bg-brand-500/80 px-4 py-1.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">Talk
+                            to an Expert</a>
+                    </div>
+                    <button type="button"
+                        class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-slate-200 hover:bg-white/5 lg:hidden"
+                        @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition.origin.top x-cloak
+                    class="mt-2 mb-4 rounded-2xl border border-white/10 bg-slate-950/95 p-4 shadow-soft lg:hidden">
+                    <nav class="flex flex-col gap-2 text-sm font-medium">
+                        <a href="index.html" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                            @click="mobileNavOpen=false">Home</a>
+                        <a href="about.html" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                            @click="mobileNavOpen=false">About</a>
+                        <a href="index.html#services" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                            @click="mobileNavOpen=false">Services</a>
+                        <a href="index.html#contact" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                            @click="mobileNavOpen=false">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 pt-28 lg:pt-32">
+            <section
+                class="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/70">
+                <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/25 blur-3xl"></div>
+                    <div
+                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-700/20 blur-3xl">
+                    </div>
+                </div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="grid gap-10 lg:grid-cols-2 items-center">
+                        <div data-aos="fade-right" data-aos-duration="800">
+                            <div
+                                class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-100">
+                                <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-400"></span>Infrastructure
+                                Solutions
+                            </div>
+                            <h1
+                                class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50">
+                                Data Center <span class="text-brand-400">Solutions</span></h1>
+                            <p class="mt-5 text-base sm:text-lg text-slate-300">Find all your Data Center requirements
+                                under one roof!</p>
+                            <p class="mt-3 text-sm sm:text-base text-slate-400">
+                                Telcomet specializes in providing customized solutions for your business needs while
+                                keeping future growth requirements in mind. We are a leading supplier of progressive
+                                carrier neutral data center services in India.
+                            </p>
+                            <div class="mt-8 flex flex-wrap items-center gap-4">
+                                <a href="index.html#contact"
+                                    class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">
+                                    Plan Your Infrastructure<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.8" class="ml-2 h-4 w-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M5 12h14M13 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative" data-aos="fade-left" data-aos-duration="800">
+                            <img src="https://www.telcomet.com/images/ab1086c616a82ce5f2336eb6c886afe8.jpg"
+                                alt="Data Center"
+                                class="rounded-3xl border border-white/10 shadow-soft w-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="border-b border-white/5 bg-slate-950/60">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">Comprehensive Data Center Solutions
+                        </h2>
+                        <p class="mt-4 max-w-3xl text-sm sm:text-base text-slate-300">
+                            Data Center solutions include the products and services required to create and maintain a
+                            Data Center. Our services provide secure and connected environments where customers connect,
+                            distribute mission-critical data, web content and media.
+                        </p>
+                    </div>
+                    <div class="mt-10 grid gap-6 md:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+                            <h3 class="text-base font-semibold text-brand-300">Network Racks</h3>
+                            <p class="mt-2 text-xs text-slate-500">Netfox, Netrack, Valrack</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+                            <h3 class="text-base font-semibold text-brand-300">Server Racks</h3>
+                            <p class="mt-2 text-xs text-slate-500">Netfox, Netrack, Valrack</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+                            <h3 class="text-base font-semibold text-brand-300">Intelligence PDU</h3>
+                            <p class="mt-2 text-xs text-slate-500">Raritan Energy Management Solutions</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+                            <h3 class="text-base font-semibold text-brand-300">Switch</h3>
+                            <p class="mt-2 text-xs text-slate-500">Brocade, Dell, CISCO, HP, Juniper</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+                            <h3 class="text-base font-semibold text-brand-300">Router</h3>
+                            <p class="mt-2 text-xs text-slate-500">CISCO, Juniper, HP</p>
+                        </div>
+                    </div>
+                    <div class="mt-10" data-aos="fade-up">
+                        <img src="https://www.telcomet.com/images/1ccdfd6dc377782ca67711a107f03c58.jpg"
+                            alt="Data Center Infrastructure"
+                            class="rounded-3xl border border-white/10 shadow-soft w-full max-w-2xl mx-auto object-cover" />
+                    </div>
+                </div>
+            </section>
+            <section class="border-b border-white/5 bg-gradient-to-br from-brand-500/10 via-slate-950 to-slate-950">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="text-center" data-aos="zoom-in" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">Ready to build your data center?
+                        </h2>
+                        <p class="mt-4 text-sm sm:text-base text-slate-300">Let's design an infrastructure that grows
+                            with you.</p>
+                        <div class="mt-8"><a href="index.html#contact"
+                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">Start
+                                Planning</a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="border-t border-white/10 bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-100">Head Office</h3>
+                        <p class="mt-3 text-xs text-slate-400">B-8, Indian Airlines Colony,<br />Prakash Nagar,
+                            Begumpet,<br />Hyderabad</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-100">Reach Us</h3>
+                        <p class="mt-3 text-xs text-slate-400"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-300">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-300">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-100">Quick Links</h3>
+                        <div class="mt-3 flex flex-wrap gap-3 text-xs text-slate-400"><a href="index.html"
+                                class="hover:text-brand-300">Home</a><a href="about.html"
+                                class="hover:text-brand-300">About</a><a href="index.html#services"
+                                class="hover:text-brand-300">Services</a><a href="index.html#contact"
+                                class="hover:text-brand-300">Contact</a></div>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-white/5 pt-8 text-center text-xs text-slate-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 })</script>
+</body>
+
+</html>
