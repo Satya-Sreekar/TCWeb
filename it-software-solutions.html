@@ -16,90 +16,88 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body class="bg-slate-950 text-slate-50 antialiased selection:bg-brand-400 selection:text-slate-950">
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-500 selection:text-white">
     <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
         <div x-show="mobileNavOpen" x-transition.opacity
             class="fixed inset-0 z-30 bg-slate-900/70 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
-        <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                    class="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 shadow-soft backdrop-blur-xl">
-                    <a href="index.html" class="flex items-center gap-3">
-                        <img src="logo1.png" alt="Telcomet"
-                            class="h-9 w-auto rounded-md object-contain bg-white/5 p-1.5" />
-                        <div class="flex flex-col leading-tight"><span
-                                class="text-sm font-semibold tracking-wide uppercase text-brand-300">Telcomet</span><span
-                                class="text-xs text-slate-300">AI-Led Digital Transformation</span></div>
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
                     </a>
                     <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
-                        <a href="index.html" class="text-slate-200 hover:text-white">Home</a>
-                        <a href="about.html" class="text-slate-200 hover:text-white">About</a>
-                        <a href="index.html#services" class="text-slate-200 hover:text-white">Services</a>
-                        <a href="index.html#contact" class="text-slate-200 hover:text-white">Contact</a>
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
                     </nav>
                     <div class="hidden items-center gap-3 lg:flex">
                         <a href="index.html#contact"
-                            class="inline-flex items-center justify-center rounded-full border border-brand-400/40 bg-brand-500/80 px-4 py-1.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">Talk
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
                             to an Expert</a>
                     </div>
-                    <button type="button"
-                        class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-slate-200 hover:bg-white/5 lg:hidden"
-                        @click="mobileNavOpen=!mobileNavOpen">
-                        <svg x-show="!mobileNavOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <svg x-show="mobileNavOpen" x-cloak xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
-                <div x-show="mobileNavOpen" x-transition.origin.top x-cloak
-                    class="mt-2 mb-4 rounded-2xl border border-white/10 bg-slate-950/95 p-4 shadow-soft lg:hidden">
-                    <nav class="flex flex-col gap-2 text-sm font-medium">
-                        <a href="index.html" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Home</a>
-                        <a href="about.html" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">About</a>
-                        <a href="index.html#services" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Services</a>
-                        <a href="index.html#contact" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
-                            @click="mobileNavOpen=false">Contact</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
                     </nav>
                 </div>
             </div>
         </header>
-        <main class="flex-1 pt-28 lg:pt-32">
+        <main class="flex-1 pt-16">
             <section
-                class="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/70">
+                class="relative overflow-hidden border-b border-gray-200 bg-gradient-to-b from-slate-50 via-white to-slate-50">
                 <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/25 blur-3xl"></div>
+                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/10 blur-3xl"></div>
                     <div
-                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-700/20 blur-3xl">
+                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-700/10 blur-3xl">
                     </div>
                 </div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
                     <div class="grid gap-10 lg:grid-cols-2 items-center">
                         <div data-aos="fade-right" data-aos-duration="800">
                             <div
-                                class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-100">
-                                <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-400"></span>Software
+                                class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+                                <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-500"></span>Software
                                 Development
                             </div>
-                            <h1
-                                class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50">
-                                IT Software <span class="text-brand-400">Solutions</span></h1>
-                            <p class="mt-5 text-base sm:text-lg text-slate-300">Maximize your ROI with effective and
+                            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
+                                IT Software <span class="text-brand-600">Solutions</span></h1>
+                            <p class="mt-5 text-base sm:text-lg text-slate-600">Maximize your ROI with effective and
                                 efficient software solutions.</p>
-                            <p class="mt-3 text-sm sm:text-base text-slate-400">
+                            <p class="mt-3 text-sm sm:text-base text-slate-500">
                                 We deliver custom software development, web and mobile applications that raise business
                                 productivity. Our awareness of changing business nature and ability to keep up with
                                 rapid change ensures your success.
                             </p>
                             <div class="mt-8 flex flex-wrap items-center gap-4">
                                 <a href="index.html#contact"
-                                    class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">
+                                    class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-600">
                                     Start Your Project<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="1.8" class="ml-2 h-4 w-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -111,139 +109,139 @@
                         <div class="relative" data-aos="fade-left" data-aos-duration="800">
                             <img src="https://www.telcomet.com/images/30fbd27e22d7b6b3c8f13e801301bd9a.jpg"
                                 alt="Software Solutions"
-                                class="rounded-3xl border border-white/10 shadow-soft w-full object-cover" />
+                                class="rounded-3xl border border-gray-200 shadow-xl shadow-slate-200/50 w-full object-cover" />
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="border-b border-white/5 bg-slate-950/60">
+            <section class="border-b border-gray-200 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
                     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6" data-aos="fade-up"
-                            data-aos-duration="800">
-                            <h3 class="text-lg font-semibold text-brand-300">Evaluation & Design</h3>
-                            <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                            data-aos="fade-up" data-aos-duration="800">
+                            <h3 class="text-lg font-semibold text-gray-900">Evaluation & Design</h3>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-600">
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Research & Development
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Research & Development
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Project Scoping</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Project Scoping</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>UI/UX Design</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>UI/UX Design</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Branding</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Branding</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Product Design</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Product Design</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Rapid Prototyping</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Rapid Prototyping</li>
                             </ul>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <h3 class="text-lg font-semibold text-brand-300">Web Development</h3>
-                            <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-lg font-semibold text-gray-900">Web Development</h3>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-600">
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Front-End Development
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Front-End Development
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Back-End Development
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Back-End Development
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>React.js</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>React.js</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Node.js</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Node.js</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>.NET Development</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>.NET Development</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Next.js</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Next.js</li>
                             </ul>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <h3 class="text-lg font-semibold text-brand-300">Mobile Development</h3>
-                            <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-lg font-semibold text-gray-900">Mobile Development</h3>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-600">
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>iOS App Development
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>iOS App Development
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Android App
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Android App
                                     Development</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>React Native</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>React Native</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Flutter</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Flutter</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Kotlin</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Kotlin</li>
                             </ul>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <h3 class="text-lg font-semibold text-brand-300">Custom Software</h3>
-                            <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-lg font-semibold text-gray-900">Custom Software</h3>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-600">
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Cloud Services</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Cloud Services</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Product Development
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Product Development
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Web Applications</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Web Applications</li>
                             </ul>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <h3 class="text-lg font-semibold text-brand-300">Maintenance & Support</h3>
-                            <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-lg font-semibold text-gray-900">Maintenance & Support</h3>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-600">
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Scrum Project
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Scrum Project
                                     Management</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>AWS & Cloud Support
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>AWS & Cloud Support
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Azure Services</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Azure Services</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Product Launch</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Product Launch</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Test Automation</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Test Automation</li>
                             </ul>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6" data-aos="fade-up"
-                            data-aos-delay="300">
-                            <h3 class="text-lg font-semibold text-brand-300">Software Licenses</h3>
-                            <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="text-lg font-semibold text-gray-900">Software Licenses</h3>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-600">
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Microsoft Licenses
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Microsoft Licenses
                                 </li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Oracle</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Oracle</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>IBM Software</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>IBM Software</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Adobe</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Adobe</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>AutoCAD</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>AutoCAD</li>
                                 <li class="flex gap-2"><span
-                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-400"></span>Red Hat</li>
+                                        class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Red Hat</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="border-b border-white/5 bg-gradient-to-br from-brand-500/10 via-slate-950 to-slate-950">
+            <section class="border-b border-gray-200 bg-gradient-to-br from-brand-500 to-brand-600">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div class="text-center" data-aos="zoom-in" data-aos-duration="800">
-                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">Ready to build your next software
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-white">Ready to build your next software
                             product?</h2>
-                        <p class="mt-4 text-sm sm:text-base text-slate-300">Let's create solutions that drive your
+                        <p class="mt-4 text-sm sm:text-base text-brand-50">Let's create solutions that drive your
                             business forward.</p>
                         <div class="mt-8"><a href="index.html#contact"
-                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">Discuss
+                                class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-brand-600 shadow-lg shadow-black/10 hover:bg-gray-50">Discuss
                                 Your Project</a></div>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="border-t border-white/10 bg-slate-950">
+        <footer class="border-t border-gray-800 bg-slate-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div class="grid gap-8 md:grid-cols-3">
                     <div>

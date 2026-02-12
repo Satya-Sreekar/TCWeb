@@ -16,89 +16,87 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body class="bg-slate-950 text-slate-50 antialiased selection:bg-brand-400 selection:text-slate-950">
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-500 selection:text-white">
     <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
         <div x-show="mobileNavOpen" x-transition.opacity
             class="fixed inset-0 z-30 bg-slate-900/70 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
-        <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                    class="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 shadow-soft backdrop-blur-xl">
-                    <a href="index.html" class="flex items-center gap-3">
-                        <img src="logo1.png" alt="Telcomet"
-                            class="h-9 w-auto rounded-md object-contain bg-white/5 p-1.5" />
-                        <div class="flex flex-col leading-tight"><span
-                                class="text-sm font-semibold tracking-wide uppercase text-brand-300">Telcomet</span><span
-                                class="text-xs text-slate-300">AI-Led Digital Transformation</span></div>
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
                     </a>
                     <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
-                        <a href="index.html" class="text-slate-200 hover:text-white">Home</a>
-                        <a href="about.html" class="text-slate-200 hover:text-white">About</a>
-                        <a href="index.html#services" class="text-slate-200 hover:text-white">Services</a>
-                        <a href="index.html#contact" class="text-slate-200 hover:text-white">Contact</a>
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
                     </nav>
                     <div class="hidden items-center gap-3 lg:flex">
                         <a href="index.html#contact"
-                            class="inline-flex items-center justify-center rounded-full border border-brand-400/40 bg-brand-500/80 px-4 py-1.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">Talk
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
                             to an Expert</a>
                     </div>
-                    <button type="button"
-                        class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-slate-200 hover:bg-white/5 lg:hidden"
-                        @click="mobileNavOpen=!mobileNavOpen">
-                        <svg x-show="!mobileNavOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <svg x-show="mobileNavOpen" x-cloak xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
-                <div x-show="mobileNavOpen" x-transition.origin.top x-cloak
-                    class="mt-2 mb-4 rounded-2xl border border-white/10 bg-slate-950/95 p-4 shadow-soft lg:hidden">
-                    <nav class="flex flex-col gap-2 text-sm font-medium">
-                        <a href="index.html" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Home</a>
-                        <a href="about.html" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">About</a>
-                        <a href="index.html#services" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Services</a>
-                        <a href="index.html#contact" class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
-                            @click="mobileNavOpen=false">Contact</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
                     </nav>
                 </div>
             </div>
         </header>
-        <main class="flex-1 pt-28 lg:pt-32">
+        <main class="flex-1 pt-16">
             <section
-                class="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/70">
+                class="relative overflow-hidden border-b border-gray-200 bg-gradient-to-b from-slate-50 via-white to-slate-50">
                 <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/25 blur-3xl"></div>
+                    <div class="absolute -left-40 top-[-8rem] h-96 w-96 rounded-full bg-brand-500/10 blur-3xl"></div>
                     <div
-                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-700/20 blur-3xl">
+                        class="absolute bottom-[-10rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-brand-700/10 blur-3xl">
                     </div>
                 </div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
                     <div class="grid gap-10 lg:grid-cols-2 items-center">
                         <div data-aos="fade-right" data-aos-duration="800">
                             <div
-                                class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py=1 text-xs font-semibold text-brand-100">
-                                <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-400"></span>Cybersecurity
+                                class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+                                <span class="inline-flex h-1.5 w-1.5 rounded-full bg-brand-500"></span>Cybersecurity
                             </div>
-                            <h1
-                                class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50">
-                                IT Security <span class="text-brand-400">Services</span></h1>
-                            <p class="mt-5 text-base sm:text-lg text-slate-300">Security should be a top priority for
+                            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
+                                IT Security <span class="text-brand-600">Services</span></h1>
+                            <p class="mt-5 text-base sm:text-lg text-slate-600">Security should be a top priority for
                                 every organization.</p>
-                            <p class="mt-3 text-sm sm:text-base text-slate-400">
+                            <p class="mt-3 text-sm sm:text-base text-slate-500">
                                 In the age of IoT and the cloud, we face increasing vulnerabilities to our networks. At
                                 Telcomet, we deliver technologies to guard against security threats, keeping your
                                 network secure and protecting organization data safely.
                             </p>
                             <div class="mt-8 flex flex-wrap items-center gap-4">
                                 <a href="index.html#contact"
-                                    class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">
+                                    class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-600">
                                     Secure Your Infrastructure<svg xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                                         class="ml-2 h-4 w-4">
@@ -111,91 +109,103 @@
                         <div class="relative" data-aos="fade-left" data-aos-duration="800">
                             <img src="https://www.telcomet.com/images/732e4d775ff59e4258d6cb8e7f9972ef.jpg"
                                 alt="IT Security"
-                                class="rounded-3xl border border-white/10 shadow-soft w-full object-cover" />
+                                class="rounded-3xl border border-gray-200 shadow-xl shadow-slate-200/50 w-full object-cover" />
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="border-b border-white/5 bg-slate-950/60">
+            <section class="border-b border-gray-200 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
                     <div data-aos="fade-up" data-aos-duration="800">
-                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">Comprehensive Security Solutions
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Comprehensive Security Solutions
                         </h2>
-                        <p class="mt-4 max-w-3xl text-sm sm:text-base text-slate-300">
+                        <p class="mt-4 max-w-3xl text-sm sm:text-base text-slate-600">
                             As a leading IT security consultant in Hyderabad, Telcomet brings a decade of expertise in
                             delivering technologies that protect against security threats. We develop strategies that
                             secure your organization through comprehensive analysis and deployment.
                         </p>
                     </div>
                     <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Antivirus</h3>
-                            <p class="mt-2 text-xs text-slate-500">Kaspersky, Symantec, McAfee, Sophos, Trendmicro,
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Antivirus</h3>
+                            <p class="mt-2 text-xs text-slate-600">Kaspersky, Symantec, McAfee, Sophos, Trendmicro,
                                 Bitdefender, Quickheal</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Gateway Firewall</h3>
-                            <p class="mt-2 text-xs text-slate-500">Cyberoam, Fortinet, Sonicwall, Checkpoint, Juniper,
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Gateway Firewall</h3>
+                            <p class="mt-2 text-xs text-slate-600">Cyberoam, Fortinet, Sonicwall, Checkpoint, Juniper,
                                 CISCO, Watchguard, Palo Alto</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Web Application Firewall</h3>
-                            <p class="mt-2 text-xs text-slate-500">Imperva, Cyberoam, Barracuda, F5</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Web Application Firewall</h3>
+                            <p class="mt-2 text-xs text-slate-600">Imperva, Cyberoam, Barracuda, F5</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">AntiSpam</h3>
-                            <p class="mt-2 text-xs text-slate-500">Barracuda, Ironport</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">AntiSpam</h3>
+                            <p class="mt-2 text-xs text-slate-600">Barracuda, Ironport</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Web Filtering</h3>
-                            <p class="mt-2 text-xs text-slate-500">Websense, Contentkeeper, Bluecoat, Cyberoam</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Web Filtering</h3>
+                            <p class="mt-2 text-xs text-slate-600">Websense, Contentkeeper, Bluecoat, Cyberoam</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">DLP</h3>
-                            <p class="mt-2 text-xs text-slate-500">Websense, Symantec, McAfee</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">DLP</h3>
+                            <p class="mt-2 text-xs text-slate-600">Websense, Symantec, McAfee</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Vulnerability Scanning</h3>
-                            <p class="mt-2 text-xs text-slate-500">Acunetix, GFI, Kaseya</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Vulnerability Scanning</h3>
+                            <p class="mt-2 text-xs text-slate-600">Acunetix, GFI, Kaseya</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Load Balancer</h3>
-                            <p class="mt-2 text-xs text-slate-500">Array Networks, F5, Radware</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Load Balancer</h3>
+                            <p class="mt-2 text-xs text-slate-600">Array Networks, F5, Radware</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Wireless Solutions</h3>
-                            <p class="mt-2 text-xs text-slate-500">Air Tight, Ruckus, Netgear, Aruba</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Wireless Solutions</h3>
+                            <p class="mt-2 text-xs text-slate-600">Air Tight, Ruckus, Netgear, Aruba</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">Two-factor Authentication</h3>
-                            <p class="mt-2 text-xs text-slate-500">RSA Tokens, Array Shield, Forti-Tokens</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">Two-factor Authentication</h3>
+                            <p class="mt-2 text-xs text-slate-600">RSA Tokens, Array Shield, Forti-Tokens</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">SIEM</h3>
-                            <p class="mt-2 text-xs text-slate-500">Symantec SSIM, RSA Envision</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">SIEM</h3>
+                            <p class="mt-2 text-xs text-slate-600">Symantec SSIM, RSA Envision</p>
                         </div>
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-                            <h3 class="text-base font-semibold text-brand-300">WAN Optimization</h3>
-                            <p class="mt-2 text-xs text-slate-500">Riverbed, Array Networks</p>
+                        <div
+                            class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-base font-semibold text-brand-600">WAN Optimization</h3>
+                            <p class="mt-2 text-xs text-slate-600">Riverbed, Array Networks</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="border-b border-white/5 bg-gradient-to-br from-brand-500/10 via-slate-950 to-slate-950">
+            <section class="border-b border-gray-200 bg-gradient-to-br from-brand-500 to-brand-600">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div class="text-center" data-aos="zoom-in" data-aos-duration="800">
-                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">Ready to strengthen your security
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-white">Ready to strengthen your security
                             posture?</h2>
-                        <p class="mt-4 text-sm sm:text-base text-slate-300">Let our security experts develop a
+                        <p class="mt-4 text-sm sm:text-base text-brand-50">Let our security experts develop a
                             comprehensive protection strategy for you.</p>
                         <div class="mt-8"><a href="index.html#contact"
-                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/40 hover:bg-brand-400">Schedule
+                                class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-brand-600 shadow-lg shadow-black/10 hover:bg-gray-50">Schedule
                                 Security Assessment</a></div>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="border-t border-white/10 bg-slate-950">
+        <footer class="border-t border-gray-800 bg-slate-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div class="grid gap-8 md:grid-cols-3">
                     <div>
