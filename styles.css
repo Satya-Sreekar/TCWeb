@@ -39,11 +39,55 @@ html {
   width: 1.75rem;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 115, 22, 1),
-    rgba(251, 146, 60, 1)
-  );
+  background: linear-gradient(90deg,
+      rgba(249, 115, 22, 1),
+      rgba(251, 146, 60, 1));
+}
+
+/* Navigation dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  padding-top: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease-out;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-dropdown-panel {
+  background: white;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12);
+}
+
+.nav-dropdown-panel a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+  transition: background 120ms ease-out, color 120ms ease-out;
+}
+
+.nav-dropdown-panel a:hover {
+  background: rgba(249, 115, 22, 0.08);
+  color: rgb(234 88 12);
 }
 
 /* Service cards */
@@ -52,16 +96,12 @@ html {
   border-radius: 1.25rem;
   padding: 1.25rem;
   border: 1px solid rgba(226, 232, 240, 0.8);
-  background: radial-gradient(
-      circle at top left,
+  background: radial-gradient(circle at top left,
       rgba(249, 115, 22, 0.08),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at bottom right,
+      transparent 55%),
+    radial-gradient(circle at bottom right,
       rgba(251, 146, 60, 0.06),
-      transparent 55%
-    ),
+      transparent 55%),
     rgba(255, 255, 255, 0.94);
   box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
   transition: transform 160ms ease-out, box-shadow 160ms ease-out,
@@ -123,11 +163,9 @@ html {
   border-radius: 1.25rem;
   padding: 1.25rem;
   border: 1px solid rgba(226, 232, 240, 0.8);
-  background: radial-gradient(
-      circle at top right,
+  background: radial-gradient(circle at top right,
       rgba(249, 115, 22, 0.06),
-      transparent 55%
-    ),
+      transparent 55%),
     rgba(255, 255, 255, 0.96);
   box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
 }
@@ -188,11 +226,9 @@ html {
   border-radius: 9999px;
   border: 1px solid rgba(226, 232, 240, 0.8);
   padding: 0.45rem 0.8rem;
-  background: radial-gradient(
-      circle at top left,
+  background: radial-gradient(circle at top left,
       rgba(249, 115, 22, 0.08),
-      transparent 55%
-    ),
+      transparent 55%),
     rgba(248, 250, 252, 0.9);
   color: rgb(51 65 85);
   text-align: center;
@@ -208,4 +244,3 @@ html {
 [x-cloak] {
   display: none !important;
 }
-
