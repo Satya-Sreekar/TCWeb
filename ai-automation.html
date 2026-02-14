@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>AI Automation | Telcomet</title>
+    <meta name="description"
+        content="Seamlessly integrate intelligent automation into enterprise operations. Eliminate manual effort, optimize workflows, and enhance accuracy with Telcomet's AI Automation solutions." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+    <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-gray-900/50 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
+                    </a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+                    </nav>
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+                            to an Expert</a>
+                    </div>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Home</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">About</a>
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Services</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 pt-16">
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-br from-brand-50 via-white to-orange-50 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+                    <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-sm font-semibold text-brand-700 mb-6">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="3" />
+                            </svg>
+                            AI Automation
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                            Intelligent Automation for <span class="text-brand-600">Enterprise Operations</span>
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+                            Seamlessly integrate intelligent automation into enterprise operations to eliminate manual
+                            effort, optimize workflows, and enhance accuracy—driving efficiency, operational agility,
+                            and measurable value across business functions.
+                        </p>
+                        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">
+                                Start Your AI Journey
+                                <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                            <a href="#case-studies"
+                                class="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-700 hover:border-brand-500 hover:text-brand-600">
+                                View Case Studies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Automation with AI Matters -->
+            <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Why Automation with AI Matters</h2>
+                        <p class="mt-4 text-lg text-gray-600">The imperative for intelligent process automation</p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Intelligent Process Automation Beyond
+                                    Rules</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Traditional automation follows static rules and fails when processes vary. AI-driven
+                                automation applies contextual understanding, adaptive learning, and predictive insights
+                                so workflows can self-adjust to real-world complexity. It enables organizations to
+                                automate both structured and dynamic processes with precision, reducing errors,
+                                improving
+                                throughput, and increasing responsiveness across operational touchpoints.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Elimination of Manual and Repetitive
+                                    Tasks</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Manual tasks are costly, slow, and prone to error, consuming valuable human capacity. AI
+                                Automation mechanisms such as cognitive decisioning, natural language processing, and
+                                pattern recognition offload repetitive work from teams. This allows staff to focus on
+                                strategic priorities, improves quality outcomes, and accelerates cycle times in
+                                high-volume operational environments.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Enhanced Visibility and Operational
+                                    Control</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Unforeseen exceptions and process inefficiencies often remain hidden until they impact
+                                performance. AI-enhanced automation provides real-time visibility into workflows,
+                                detects
+                                anomalies proactively, and delivers dashboards with actionable insights. These
+                                capabilities empower leaders to make timely decisions, anticipate bottlenecks, and
+                                continuously refine end-to-end execution across functions and business units.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Scalable, Cost-Efficient Growth</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                As volumes rise, scaling operations through additional human resources is expensive and
+                                unsustainable. Automation with AI enables organizations to scale throughput without
+                                proportional increases in headcount or operating costs. By harnessing intelligent
+                                workflows, enterprises achieve predictable, high-performance outcomes with leaner
+                                operational models and improved profitability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How Telcomet Delivers AI Automation -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">How Telcomet Delivers AI Automation
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600">Our proven methodology for intelligent automation</p>
+                    </div>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">1</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Automation Readiness & Opportunity
+                                Assessment</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Telcomet begins by evaluating current systems, data maturity, and process landscapes to
+                                pinpoint high-impact automation opportunities. Our assessments quantify effort, cost,
+                                and
+                                expected value, enabling informed prioritization of workflows ready for AI integration.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">2</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Intelligent Workflow Design &
+                                Blueprinting</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                We design automation blueprints that combine AI, machine learning, and rule-based
+                                engines
+                                to create flexible, adaptive workflows. These blueprints map decision logic, exceptions,
+                                and integration points, ensuring automation is intelligently responsive.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">3</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Data Preparation & AI Model Enablement
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                AI automation depends on clean, structured, and contextualized data. Telcomet implements
+                                data pipelines and pre-processing mechanisms to ready enterprise data for AI
+                                assimilation. We also enable cognitive services such as NLP, OCR, and predictive
+                                analytics.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">4</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Seamless Enterprise Integration &
+                                Orchestration</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Telcomet's automation solutions integrate with enterprise systems including ERP, CRM,
+                                service platforms, and legacy applications. We orchestrate cross-system workflows using
+                                secure, scalable interfaces, enabling end-to-end processes without human intervention.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">5</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Monitoring, Optimization &
+                                Continuous Learning</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Post-deployment, automation performance is continuously monitored through analytics and
+                                feedback loops. Telcomet refines models, rules, and exception paths using empirical
+                                performance signals to improve accuracy, throughput, and efficiency over time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Telcomet is Unique -->
+            <section class="py-16 lg:py-20 bg-white border-y border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Why Telcomet is Unique</h2>
+                        <p class="mt-4 text-lg text-gray-600">Our competitive advantages in AI Automation</p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Business-Aligned Frameworks</h3>
+                            <p class="text-gray-600 text-sm">Customized AI automation frameworks designed to deliver
+                                measurable value aligned to business objectives.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Security-First Architecture</h3>
+                            <p class="text-gray-600 text-sm">Automation solutions built with enterprise-grade security,
+                                compliance, and safe data practices.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Industry-Specific Accelerators</h3>
+                            <p class="text-gray-600 text-sm">Pre-configured automation templates tailored to key
+                                industries, enabling faster deployment and ROI.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Seamless Systems Orchestration</h3>
+                            <p class="text-gray-600 text-sm">Cross-system automation that integrates with legacy and
+                                enterprise platforms without disruption.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Continuous Optimization Mindset</h3>
+                            <p class="text-gray-600 text-sm">AI automation evolves with performance feedback, ensuring
+                                sustainable long-term results.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Measurable Business Impact & ROI -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Measurable Business Impact & ROI</h2>
+                        <p class="mt-4 text-lg text-gray-600">Proven results from AI Automation initiatives</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">50–80%</div>
+                            <p class="text-gray-900 font-semibold mb-1">Reduction in Manual Processing</p>
+                            <p class="text-gray-600 text-sm">AI automation eliminates repetitive tasks, enabling teams
+                                to focus on strategic priorities.</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">3–5x</div>
+                            <p class="text-gray-900 font-semibold mb-1">Faster Process Execution</p>
+                            <p class="text-gray-600 text-sm">Automated workflows complete tasks significantly faster
+                                than manual execution consistently.</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">~0%</div>
+                            <p class="text-gray-900 font-semibold mb-1">Error Rates in Workflows</p>
+                            <p class="text-gray-600 text-sm">Intelligent automation minimizes human error, ensuring
+                                reliable, repeatable process outcomes.</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">4–6mo</div>
+                            <p class="text-gray-900 font-semibold mb-1">ROI Delivered</p>
+                            <p class="text-gray-600 text-sm">Rapid deployment and measurable outcomes generate strong
+                                returns in under six months.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Studies -->
+            <section id="case-studies" class="py-16 lg:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">AI Automation Case Studies</h2>
+                        <p class="mt-4 text-lg text-gray-600">Real-world results delivered by Telcomet</p>
+                    </div>
+                    <div class="grid gap-8 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <!-- Case Study 1: Gold Lending Institution -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Gold Lending
+                                    Institution</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI Automation for loan operations and compliance workflows across branch-level
+                                transactions.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>AI-powered OCR and NLP for gold loan document digitization.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Automated KYC, AML, and customer verification workflows.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Intelligent exception handling for valuation and compliance anomalies.</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">65%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        manual loan processing</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">4x</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster gold
+                                        loan approvals</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">85–90%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        documentation errors</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35–40%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        regulatory audits</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Study 2: Education Group -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Education
+                                    Group</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI Automation for academic and administrative operations across multi-campus
+                                institution.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Automated admissions, enrollment, and document validation.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>AI-driven fee processing, reconciliation, and financial reporting.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Real-time dashboards for academic and operational insights.</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">60%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        admin workload</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">3x</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        admissions processing</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in data accuracy</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">45%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Increase in
+                                        staff productivity</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Study 3: Energy & Utilities Provider -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Energy &
+                                    Utilities Provider</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI Automation for billing, service request handling, and operational workflows.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Automated billing validation and exception management.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Intelligent service request routing and priority-based case handling.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Predictive alerts for early detection of billing and service anomalies.</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">55%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        billing errors</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">40%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        service request processing</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">24%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        operational costs</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">28%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in customer trust</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="bg-gradient-to-br from-brand-500 to-brand-600 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center text-white" data-aos="zoom-in">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Automate Your Operations with AI?</h2>
+                        <p class="text-lg text-brand-50 mb-8 max-w-2xl mx-auto">Let's discuss how AI Automation can
+                            drive measurable ROI and sustainable growth for your organization.</p>
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-brand-600 hover:bg-gray-100 shadow-xl">
+                            Schedule a Consultation
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Head Office</h3>
+                        <p class="text-sm">B-8, Indian Airlines Colony,<br />Prakash Nagar, Begumpet,<br />Hyderabad
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Reach Us</h3>
+                        <p class="text-sm"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-400">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+                        <div class="flex flex-wrap gap-3 text-sm">
+                            <a href="index.html" class="hover:text-brand-400">Home</a>
+                            <a href="about.html" class="hover:text-brand-400">About</a>
+                            <a href="services.html" class="hover:text-brand-400">Services</a>
+                            <a href="ai-digital-transformation.html" class="hover:text-brand-400">AI Transformation</a>
+                            <a href="case-studies.html" class="hover:text-brand-400">Case Studies</a>
+                            <a href="contact.html" class="hover:text-brand-400">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 })</script>
+</body>
+
+</html>

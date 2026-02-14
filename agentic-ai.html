@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Agentic AI | Telcomet</title>
+    <meta name="description"
+        content="Agentic AI solutions that enable autonomous, goal-driven intelligence—helping enterprises improve responsiveness, reduce operational effort, and scale decision-making." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+    <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-gray-900/50 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
+                    </a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+                    </nav>
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+                            to an Expert</a>
+                    </div>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Home</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">About</a>
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Services</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 pt-16">
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-br from-brand-50 via-white to-orange-50 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+                    <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-sm font-semibold text-brand-700 mb-6">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="3" />
+                            </svg>
+                            Agentic AI
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                            Autonomous, Goal-Driven <span class="text-brand-600">AI Intelligence</span>
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+                            Agentic AI solutions that enable autonomous, goal-driven intelligence—helping enterprises
+                            improve responsiveness, reduce operational effort, and scale decision-making across
+                            customer,
+                            operational, and enterprise workflows.
+                        </p>
+                        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">
+                                Deploy AI Agents
+                                <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                            <a href="#case-studies"
+                                class="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-700 hover:border-brand-500 hover:text-brand-600">
+                                View Case Studies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Agentic AI Matters -->
+            <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Why AI Agents / Agentic AI Matters
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600">The shift from automation to autonomous intelligence</p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Shift from Automation to Autonomy</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Traditional automation follows predefined rules and breaks when conditions change.
+                                Agentic AI introduces autonomous intelligence that can reason, plan, and act toward
+                                business goals. AI Agents adapt dynamically to context, enabling organizations to manage
+                                complex, real-world processes without constant human intervention or manual oversight.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Reduced Operational Dependency on
+                                    Humans</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Many enterprises rely on human teams for repetitive, high-volume tasks, increasing costs
+                                and inconsistency. AI Agents autonomously handle such workloads with accuracy and
+                                continuity. This significantly reduces manual effort, improves execution speed, and
+                                allows human teams to focus on strategic, judgment-driven responsibilities.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Always-On Responsiveness and
+                                    Availability</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Customer and internal expectations demand immediate responses, regardless of time zones
+                                or business hours. AI Agents operate continuously without fatigue, delivering
+                                consistent,
+                                real-time engagement. This ensures uninterrupted service delivery, faster issue
+                                resolution, and improved experience across customer support, operations, and internal
+                                functions.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Consistent, Data-Driven
+                                    Decision-Making</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Human decision-making varies based on experience, workload, and context. Agentic AI
+                                applies consistent logic supported by data, historical patterns, and learned behavior.
+                                This improves decision accuracy, reduces variability, and ensures predictable outcomes
+                                across large-scale, high-frequency enterprise operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How Telcomet Delivers Agentic AI -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">How Telcomet Delivers Agentic AI</h2>
+                        <p class="mt-4 text-lg text-gray-600">Our proven methodology for autonomous AI agents</p>
+                    </div>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">1</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">AI Agent Readiness & Use-Case
+                                Assessment</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Telcomet begins by evaluating business workflows, system landscapes, data availability,
+                                and operational pain points. This assessment identifies high-impact use cases where AI
+                                Agents can deliver measurable value, ensuring deployments are aligned with business
+                                objectives.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">2</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Goal-Driven Agent Design &
+                                Architecture</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                We design AI Agents with clearly defined goals, decision boundaries, and execution
+                                logic. Unlike rule-based bots, these agents can plan actions, evaluate outcomes, and
+                                adapt behavior dynamically—ensuring they deliver results aligned to operational and
+                                customer experience KPIs.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">3</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Context-Aware Intelligence & Memory
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Telcomet builds AI Agents capable of understanding context, retaining interaction
+                                history, and interpreting intent. This enables personalized, relevant, and multi-step
+                                interactions across processes—ensuring agents respond intelligently rather than
+                                generically.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">4</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Seamless Enterprise Integration &
+                                Orchestration</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                AI Agents are integrated with enterprise systems such as CRM, ERP, service desks, and
+                                operational platforms. This allows agents to execute actions across systems—enabling
+                                true
+                                end-to-end automation rather than isolated conversational responses.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+                                <span class="text-2xl font-bold text-brand-600">5</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Continuous Performance Optimization
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Post-deployment, AI Agent performance is continuously monitored using analytics and
+                                feedback loops. Models are refined to improve accuracy, efficiency, and
+                                outcomes—ensuring sustained business value, adaptability to change, and long-term
+                                operational reliability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Telcomet is Unique -->
+            <section class="py-16 lg:py-20 bg-white border-y border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Why Telcomet is Unique</h2>
+                        <p class="mt-4 text-lg text-gray-600">Our competitive advantages in Agentic AI</p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Proven Production Deployments</h3>
+                            <p class="text-gray-600 text-sm">Market-ready AI Agents deployed in real customer
+                                environments with measurable success.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Security-First Agent Architecture</h3>
+                            <p class="text-gray-600 text-sm">AI Agents built with enterprise security, privacy, and
+                                compliance by foundational design.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Business KPI-Driven Implementation
+                            </h3>
+                            <p class="text-gray-600 text-sm">AI driven by outcomes, aligning agents to measurable
+                                business performance indicators.</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Seamless Enterprise Integration</h3>
+                            <p class="text-gray-600 text-sm">Agents integrate with CRM, ERP, workflows, and legacy
+                                systems for true automation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Measurable Business Impact & ROI -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Measurable Business Impact & ROI</h2>
+                        <p class="mt-4 text-lg text-gray-600">Proven results from Agentic AI deployments</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">40–70%</div>
+                            <p class="text-gray-900 font-semibold mb-1">Reduction in Manual Workload</p>
+                            <p class="text-gray-600 text-sm">AI Agents automate repetitive tasks, freeing teams to focus
+                                on strategic priorities.</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">50–60%</div>
+                            <p class="text-gray-900 font-semibold mb-1">Improvement in Response Speeds</p>
+                            <p class="text-gray-600 text-sm">Instant, intelligent responses significantly reduce delays
+                                across customer and operational interactions.</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">24/7</div>
+                            <p class="text-gray-900 font-semibold mb-1">Availability Without Increased Costs</p>
+                            <p class="text-gray-600 text-sm">Always-on AI Agents deliver continuous service without
+                                proportional staffing or infrastructure expenses.</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-brand-500 shadow-md">
+                            <div class="text-4xl font-bold text-brand-600 mb-2">3–5x</div>
+                            <p class="text-gray-900 font-semibold mb-1">ROI Within 6–9 Months</p>
+                            <p class="text-gray-600 text-sm">Rapid value realization through cost savings, efficiency
+                                gains, and improved service outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Studies -->
+            <section id="case-studies" class="py-16 lg:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Agentic AI Case Studies</h2>
+                        <p class="mt-4 text-lg text-gray-600">Real-world results delivered by Telcomet</p>
+                    </div>
+                    <div class="grid gap-8 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <!-- Case Study 1: Retail Chain -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Retail Chain
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI Agents for customer engagement across digital and assisted channels.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Deployed customer support AI Agents on chat and voice channels.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Integrated CRM data for personalized responses and context.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Smart escalation and human handoffs for complex queries.</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">60%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        support workload</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">50%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        response times</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">24/7</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Omnichannel
+                                        support availability</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">18%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Increased
+                                        conversion rates</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Study 2: Telecommunications -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.858 15.355-5.858 21.213 0" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">
+                                    Telecommunications</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI Agents for network support, incident management, and NOC operations.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>AI Agents automated network incident ticket creation and handling.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Incidents prioritized based on severity, impact, and SLA thresholds.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Step-by-step remediation guidance to NOC and frontline teams.</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">55%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        incident triage</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">45%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        NOC support costs</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in SLA compliance</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Increase in
+                                        resolution accuracy</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Study 3: Hospitality Group -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Hospitality
+                                    Group</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">
+                                AI Agents for guest services across multi-property operations.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>AI Agents deployed across mobile apps, kiosks, and chat platforms.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Digital check-in, room requests, and service bookings automated.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-gray-600">
+                                    <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Personalized recommendations using guest profiles and preferences.</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">70%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduction in
+                                        repetitive inquiries</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">45%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        response times</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improvement
+                                        in service consistency</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Increase in
+                                        satisfaction scores</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="bg-gradient-to-br from-brand-500 to-brand-600 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center text-white" data-aos="zoom-in">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Deploy AI Agents in Your Enterprise?
+                        </h2>
+                        <p class="text-lg text-brand-50 mb-8 max-w-2xl mx-auto">Let's discuss how Agentic AI can drive
+                            autonomous intelligence and measurable ROI for your organization.</p>
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-brand-600 hover:bg-gray-100 shadow-xl">
+                            Schedule a Consultation
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Head Office</h3>
+                        <p class="text-sm">B-8, Indian Airlines Colony,<br />Prakash Nagar, Begumpet,<br />Hyderabad
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Reach Us</h3>
+                        <p class="text-sm"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-400">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+                        <div class="flex flex-wrap gap-3 text-sm">
+                            <a href="index.html" class="hover:text-brand-400">Home</a>
+                            <a href="about.html" class="hover:text-brand-400">About</a>
+                            <a href="services.html" class="hover:text-brand-400">Services</a>
+                            <a href="ai-digital-transformation.html" class="hover:text-brand-400">AI Transformation</a>
+                            <a href="case-studies.html" class="hover:text-brand-400">Case Studies</a>
+                            <a href="contact.html" class="hover:text-brand-400">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 })</script>
+</body>
+
+</html>

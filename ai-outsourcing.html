@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>AI Outsourcing | Telcomet</title>
+    <meta name="description"
+        content="Access expert AI teams delivering secure, scalable solutions with predictable outcomes and faster time-to-value. Telcomet's AI Outsourcing services." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+    <div x-data="{mobileNavOpen:false}" @keydown.escape.window="mobileNavOpen=false" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity
+            class="fixed inset-0 z-30 bg-gray-900/50 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center"><img src="logo1.png" alt="Telcomet"
+                            class="h-10 w-auto" /></a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
+                        <a href="ai-digital-transformation.html" class="text-gray-700 hover:text-brand-600">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+                    </nav>
+                    <div class="hidden items-center gap-3 lg:flex">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
+                            to an Expert</a>
+                    </div>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Home</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">About</a>
+                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Services</a>
+                        <a href="ai-digital-transformation.html"
+                            class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI
+                            Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Case Studies</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 pt-16">
+
+            <!-- 1. Hero Banner -->
+            <section class="bg-gradient-to-br from-brand-50 via-white to-orange-50 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+                    <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-sm font-semibold text-brand-700 mb-6">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="3" />
+                            </svg>
+                            AI Outsourcing
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                            AI Outsourcing <span class="text-brand-600">Excellence</span>
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">Access expert AI teams
+                            delivering secure, scalable solutions with predictable outcomes and faster time-to-value
+                            globally.</p>
+                        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                            <a href="contact.html"
+                                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">Get
+                                Started <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg></a>
+                            <a href="#case-studies"
+                                class="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-700 hover:border-brand-500 hover:text-brand-600">View
+                                Case Studies</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. What is AI Outsourcing -->
+            <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">What is AI Outsourcing</h2>
+                        <p class="mt-4 text-lg text-gray-600">Understanding the strategic value of external AI delivery
+                        </p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">AI Outsourcing Explained</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">AI outsourcing enables organizations to access
+                                specialized AI expertise and delivery capabilities externally, allowing faster
+                                implementation, reduced risk, and scalable AI adoption without building internal teams.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">In-House vs Outsourced AI</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">In-house AI requires long-term hiring,
+                                infrastructure, and management, while outsourced AI offers immediate expertise, flexible
+                                scaling, lower fixed costs, and faster business outcomes.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">When to Outsource AI</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Organizations should consider AI outsourcing when
+                                rapid deployment, specialized skills, cost control, and predictable outcomes are
+                                required without long-term workforce or infrastructure commitments.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Predictable Business Outcomes</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">AI initiatives are delivered with defined KPIs,
+                                SLAs, and governance frameworks, ensuring transparency, accountability, and consistent
+                                alignment between AI investments and measurable, business-driven outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Why AI Outsourcing with Telcomet Matters -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Why AI Outsourcing with Telcomet
+                            Matters</h2>
+                        <p class="mt-4 text-lg text-gray-600">Strategic advantages of partnering with Telcomet</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Faster Time-to-Value</h3>
+                            <p class="text-gray-600 text-sm">Telcomet accelerates AI adoption by deploying ready
+                                expertise and proven frameworks, enabling organizations to realize measurable business
+                                value quickly.</p>
+                        </div>
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Proven AI Expertise</h3>
+                            <p class="text-gray-600 text-sm">Immediate access to experienced AI architects, engineers,
+                                and data scientists who design, deploy, and scale AI solutions using industry best
+                                practices.</p>
+                        </div>
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Flexible Scaling</h3>
+                            <p class="text-gray-600 text-sm">Reduces fixed costs and enables flexible scaling, allowing
+                                organizations to expand or optimize AI initiatives without long-term commitments.</p>
+                        </div>
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">KPI-Driven Outcomes</h3>
+                            <p class="text-gray-600 text-sm">AI initiatives delivered with defined KPIs, SLAs, and
+                                governance models ensuring transparency and alignment with tangible business outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Engagement Models -->
+            <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">AI Outsourcing Engagement Models</h2>
+                        <p class="mt-4 text-lg text-gray-600">Flexible models tailored to your business needs</p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Dedicated AI Teams</h3>
+                            <p class="text-gray-600 text-sm">Dedicated AI teams working exclusively on your initiatives
+                                with consistent expertise, deep domain understanding, and flexible scaling.</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Project-Based Delivery</h3>
+                            <p class="text-gray-600 text-sm">Clearly defined objectives, timelines, and outcomes with
+                                milestone-based governance and measurable results without long-term commitments.</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Managed Services</h3>
+                            <p class="text-gray-600 text-sm">Continuously operate, monitor, and optimize AI systems
+                                ensuring reliability, performance improvements, and cost predictability.</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Hybrid / BOT Model</h3>
+                            <p class="text-gray-600 text-sm">Build AI capabilities, operate with Telcomet expertise, and
+                                transfer ownership when your teams mature and long-term independence is achieved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. AI Capabilities -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Our AI Capabilities</h2>
+                        <p class="mt-4 text-lg text-gray-600">Comprehensive AI services available through outsourcing
+                        </p>
+                    </div>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-gray-900 mb-1">AI Agents & Agentic AI</h3>
+                            <p class="text-gray-600 text-xs">Autonomous AI agents for interactions, decisions, and
+                                goal-driven operations.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-gray-900 mb-1">Intelligent Automation</h3>
+                            <p class="text-gray-600 text-xs">AI-driven workflows that adapt, reduce errors, and
+                                accelerate execution.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-gray-900 mb-1">ML & Predictive Analytics</h3>
+                            <p class="text-gray-600 text-xs">Uncover insights, forecast outcomes, and drive data-driven
+                                strategies.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-gray-900 mb-1">NLP, OCR & Document AI</h3>
+                            <p class="text-gray-600 text-xs">Extract and process unstructured documents with speed and
+                                accuracy.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm text-center">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-gray-900 mb-1">Enterprise Integration</h3>
+                            <p class="text-gray-600 text-xs">Seamless AI integration with ERP, CRM, and legacy systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. How Telcomet Delivers -->
+            <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">How Telcomet Delivers AI Outsourcing
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600">Our proven delivery methodology</p>
+                    </div>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4"><span
+                                    class="text-2xl font-bold text-brand-600">1</span></div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Readiness Assessment</h3>
+                            <p class="text-gray-600 text-sm">Assess business objectives, data maturity, systems, and
+                                risks to identify high-impact AI opportunities.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4"><span
+                                    class="text-2xl font-bold text-brand-600">2</span></div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Architecture & Roadmap</h3>
+                            <p class="text-gray-600 text-sm">Design secure, scalable AI architectures and phased
+                                roadmaps aligned with business priorities.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4"><span
+                                    class="text-2xl font-bold text-brand-600">3</span></div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Agile Development</h3>
+                            <p class="text-gray-600 text-sm">Rapidly develop, test, and deploy AI solutions with
+                                continuous feedback and reduced risk.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4"><span
+                                    class="text-2xl font-bold text-brand-600">4</span></div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Security & Compliance</h3>
+                            <p class="text-gray-600 text-sm">Strong security controls, governance frameworks, and
+                                compliance measures for enterprise integrity.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                            <div class="w-14 h-14 rounded-lg bg-brand-100 flex items-center justify-center mb-4"><span
+                                    class="text-2xl font-bold text-brand-600">5</span></div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Continuous Optimization</h3>
+                            <p class="text-gray-600 text-sm">Monitor performance, refine models, and optimize AI systems
+                                for sustained long-term value.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. AI & ML Centre of Excellence -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-4" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">AI &amp; ML Centre of Excellence</h2>
+                        <p class="mt-4 text-lg text-gray-600">100+ dedicated AI/ML professionals delivering
+                            enterprise-grade solutions</p>
+                    </div>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-12" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">AI Architects</h3>
+                            <p class="text-gray-600 text-xs">Design scalable, secure AI systems, defining solution
+                                blueprints, technology stacks, and integration strategies aligned with business
+                                objectives.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Data Scientists &amp; ML Engineers
+                            </h3>
+                            <p class="text-gray-600 text-xs">Develop, train, and optimize models, transforming complex
+                                data into actionable intelligence with accuracy and continuous improvement.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">AI Product Managers</h3>
+                            <p class="text-gray-600 text-xs">Translate business needs into AI roadmaps, prioritize
+                                features, align stakeholders, and ensure measurable value and adoption.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Security &amp; Compliance</h3>
+                            <p class="text-gray-600 text-xs">Ensure AI solutions meet data privacy, regulatory, and
+                                security standards, embedding governance and audit readiness into every deployment.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 text-center">
+                            <div
+                                class="w-14 h-14 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-3">
+                                <svg class="h-7 w-7 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base font-semibold text-gray-900 mb-2">Domain Experts</h3>
+                            <p class="text-gray-600 text-xs">Industry-specific knowledge ensuring AI solutions are
+                                context-aware, practical, and aligned with real-world operational workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Security, Compliance & Governance -->
+            <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Security, Compliance &amp; Governance
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600">Enterprise-grade trust and protection at every layer</p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Security-First AI Architecture</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Telcomet designs AI solutions with security
+                                embedded at every layer, protecting systems, models, and data against threats while
+                                ensuring resilience, reliability, and enterprise-grade operational integrity.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Data Privacy &amp; Access Controls</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Strict data privacy policies and role-based access
+                                controls ensure sensitive information is protected, accessed only by authorized users,
+                                and handled in compliance with organizational and regulatory requirements.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Compliance Alignment</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">AI solutions are aligned with industry standards
+                                and regional regulations, ensuring consistent adherence to compliance mandates across
+                                geographies, sectors, and evolving regulatory frameworks.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Model Governance &amp; Auditability</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Telcomet implements robust model governance,
+                                traceability, and audit mechanisms, enabling transparency, explainability, and
+                                accountability throughout the AI lifecycle for regulatory and enterprise assurance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Who Should Choose AI Outsourcing -->
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Who Should Choose AI Outsourcing</h2>
+                        <p class="mt-4 text-lg text-gray-600">Is AI Outsourcing right for your organization?</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Starting AI Journey</h3>
+                            <p class="text-gray-600 text-sm">Expert guidance, proven frameworks, and reduced risk for
+                                organizations beginning AI adoption without costly trial-and-error.</p>
+                        </div>
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Lacking AI Talent</h3>
+                            <p class="text-gray-600 text-sm">Immediate access to experienced professionals, closing
+                                capability gaps without long-term hiring or workforce restructuring.</p>
+                        </div>
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Needing Rapid Scale</h3>
+                            <p class="text-gray-600 text-sm">Scalable delivery models enabling quick deployment across
+                                functions while maintaining performance and governance.</p>
+                        </div>
+                        <div
+                            class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center mb-4">
+                                <svg class="h-6 w-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Cost Predictability</h3>
+                            <p class="text-gray-600 text-sm">Predictable pricing models, clear KPIs, and measurable
+                                outcomes, reducing financial uncertainty while scaling AI.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Case Studies -->
+            <section id="case-studies" class="py-16 lg:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">AI Outsourcing Case Studies</h2>
+                        <p class="mt-4 text-lg text-gray-600">Real-world results delivered by Telcomet</p>
+                    </div>
+                    <div class="grid gap-8 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <!-- Case Study 1: Real Estate -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Real Estate
+                                    &amp; Property Management</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">AI outsourcing for automating tenant operations,
+                                analytics, and reporting across multiple properties in Australia.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Dedicated AI team for property ops &amp; analytics</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Predictive models for occupancy &amp; maintenance</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Integrated with property management &amp; ERP</span></li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">45%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduced
+                                        operational effort</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">3x</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        request handling</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Cost
+                                        optimization</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">25%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Improved
+                                        asset utilization</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Study 2: Media & Digital Entertainment -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Media &amp;
+                                    Digital Entertainment</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">AI outsourcing for content operations and audience
+                                analytics to improve personalization and automate workflows.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>NLP &amp; ML models for content classification</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Predictive analytics for viewer behavior</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Real-time engagement feedback optimization</span></li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">60%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        content processing</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Higher
+                                        engagement</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">30%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Reduced
+                                        operational costs</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">45%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster AI
+                                        innovation</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case Study 3: Professional Services -->
+                        <div
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
+                                    <svg class="h-6 w-6 text-brand-600 group-hover:text-white" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-brand-600">Professional
+                                    Services &amp; Consulting</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6 font-medium">AI outsourcing for internal operations, knowledge
+                                workflows, and client analytics at a global consulting firm.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>NLP &amp; OCR for knowledge automation</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Standardized AI frameworks for consistent delivery</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600"><svg
+                                        class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg><span>Secure AI environment with managed operations</span></li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">40%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Productivity
+                                        improvement</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">50%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Faster
+                                        research cycles</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">32%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Lower
+                                        delivery costs</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-brand-600">35%</div>
+                                    <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Consistent
+                                        insight quality</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="bg-gradient-to-br from-brand-500 to-brand-600 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center text-white" data-aos="zoom-in">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Outsource Your AI Initiatives?</h2>
+                        <p class="text-lg text-brand-50 mb-8 max-w-2xl mx-auto">Let's discuss how AI Outsourcing can
+                            accelerate your AI journey with predictable outcomes and faster time-to-value.</p>
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-brand-600 hover:bg-gray-100 shadow-xl">
+                            Talk to an Expert
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Head Office</h3>
+                        <p class="text-sm">B-8, Indian Airlines Colony,<br />Prakash Nagar, Begumpet,<br />Hyderabad</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Reach Us</h3>
+                        <p class="text-sm"><a href="mailto:praveen@telcomet.com"
+                                class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
+                                class="hover:text-brand-400">+91 80088 88135</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3">Quick Links</h3>
+                        <div class="flex flex-wrap gap-3 text-sm"><a href="index.html"
+                                class="hover:text-brand-400">Home</a><a href="about.html"
+                                class="hover:text-brand-400">About</a><a href="services.html"
+                                class="hover:text-brand-400">Services</a><a href="ai-digital-transformation.html"
+                                class="hover:text-brand-400">AI Transformation</a><a href="case-studies.html"
+                                class="hover:text-brand-400">Case Studies</a><a href="contact.html"
+                                class="hover:text-brand-400">Contact</a></div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All
+                    rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 })</script>
+</body>
+
+</html>
