@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Professional Services AI Outsourcing Case Study | Telcomet</title>
+    <meta name="description" content="How Telcomet's AI outsourcing helped a consulting firm achieve 40% productivity improvement." />
+    <link rel="icon" type="image/jpeg" href="logo1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-white text-gray-900">
+    <div x-data="{mobileNavOpen:false}" class="min-h-screen flex flex-col">
+        <div x-show="mobileNavOpen" x-transition.opacity class="fixed inset-0 z-30 bg-gray-900/50 backdrop-blur-sm lg:hidden" @click="mobileNavOpen=false"></div>
+        <header class="fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center gap-3"><img src="logo1.png" alt="Telcomet" class="h-10 w-auto" /></a>
+                    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+                        <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
+                        <div class="nav-dropdown">
+                            <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">IT Infra & Security <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></span>
+                            <div class="nav-dropdown-menu"><div class="nav-dropdown-panel">
+                                <a href="it-infrastructure.html">Enterprise IT Infrastructure</a>
+                                <a href="it-security-services.html">IT Security Services</a>
+                                <a href="why-choose-telcomet.html">Why Choose Telcomet</a>
+                            </div></div>
+                        </div>
+                        <div class="nav-dropdown">
+                            <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">AI Transformation <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></span>
+                            <div class="nav-dropdown-menu"><div class="nav-dropdown-panel">
+                                <a href="ai-automation.html">AI Automation</a>
+                                <a href="agentic-ai.html">Agentic AI</a>
+                                <a href="ai-outsourcing.html">AI Outsourcing</a>
+                                <a href="ai-digital-transformation.html">Digital Transformation</a>
+                            </div></div>
+                        </div>
+                        <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
+                    </nav>
+                    <a href="contact.html" class="hidden lg:inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk to an Expert</a>
+                    <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+                <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Home</a>
+                        <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">IT Infra & Security</div>
+                        <a href="it-infrastructure.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Enterprise IT Infrastructure</a>
+                        <a href="it-security-services.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">IT Security Services</a>
+                        <a href="why-choose-telcomet.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Why Choose Telcomet</a>
+                        <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">AI Transformation</div>
+                        <a href="ai-automation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI Automation</a>
+                        <a href="agentic-ai.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Agentic AI</a>
+                        <a href="ai-outsourcing.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI Outsourcing</a>
+                        <a href="ai-digital-transformation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Digital Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Case Studies</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">About</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 pt-16">
+            <section class="bg-gradient-to-br from-gray-50 to-white border-b border-gray-200 py-12 lg:py-16">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <a href="case-studies.html" class="inline-flex items-center gap-2 text-sm text-brand-600 hover:text-brand-700 mb-6"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>Back to Case Studies</a>
+                    <div class="inline-block bg-brand-100 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">CASE STUDY</div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Professional Services</h1>
+                    <p class="text-xl text-gray-700">AI outsourcing for knowledge workflows and client analytics delivering productivity and insights at a global consulting firm</p>
+                </div>
+            </section>
+            <section class="py-12 bg-white">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 mb-12">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
+                        <p class="text-gray-700 leading-relaxed">A global professional services and consulting firm engaged Telcomet's AI outsourcing services to transform knowledge management and client analytics workflows. The firm's consultants spent significant time on manual research, document preparation, data analysis, and client reporting. Knowledge was siloed across practice areas, client insights were fragmented, and scaling consulting capacity required proportional headcount increases. Telcomet's dedicated AI team was deployed to automate research workflows, build intelligent knowledge systems, and create AI-powered client analytics capabilities.</p>
+                    </div>
+                    <div class="mb-12" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Industry Challenge</h2>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" /></svg>
+                                    </div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-1">Time-Intensive Research</h3><p class="text-sm text-gray-600">Consultants spent 30-40% of their time on manual research and data gathering</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" /></svg>
+                                    </div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-1">Siloed Knowledge</h3><p class="text-sm text-gray-600">Expertise and deliverables were isolated across practice areas without knowledge sharing</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" /></svg>
+                                    </div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-1">Fragmented Client Data</h3><p class="text-sm text-gray-600">Client information was scattered across systems making holistic analysis impossible</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                        <svg class="h-5 w-5 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" /></svg>
+                                    </div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-1">Linear Scaling Model</h3><p class="text-sm text-gray-600">Growing client base required proportional consultant headcount increases</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">AI-Led Transformation Approach</h2>
+                        <div class="space-y-4">
+                            <div class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">1</div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-2">Knowledge Workflow Assessment</h3><p class="text-gray-700">Analysis of research, analysis, and deliverable creation processes across practice areas</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">2</div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-2">AI-Powered Research Assistant</h3><p class="text-gray-700">Automated research gathering, synthesis, and summarization from internal and external sources</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">3</div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-2">Intelligent Knowledge Repository</h3><p class="text-gray-700">AI-organized searchable repository connecting expertise across practice areas</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">4</div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-2">Client Analytics Platform</h3><p class="text-gray-700">Unified client intelligence with AI-driven insights, trend analysis, and opportunity identification</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-brand-50 to-white border-l-4 border-brand-500 rounded-lg p-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">5</div>
+                                    <div><h3 class="font-semibold text-gray-900 mb-2">Automated Report Generation</h3><p class="text-gray-700">AI-assisted creation of client deliverables, proposals, and analytical reports</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Business Impact &amp; ROI</h2>
+                        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">40%</div>
+                                <p class="font-semibold text-gray-900">Productivity Improvement</p>
+                            </div>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">50%</div>
+                                <p class="font-semibold text-gray-900">Faster Research Cycles</p>
+                            </div>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">35%</div>
+                                <p class="font-semibold text-gray-900">Better Client Insights</p>
+                            </div>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">25%</div>
+                                <p class="font-semibold text-gray-900">Revenue Growth per Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl p-8 text-white" data-aos="fade-up">
+                        <h2 class="text-2xl font-bold mb-4">Final Outcome</h2>
+                        <p class="leading-relaxed">AI outsourcing transformed the consulting firm's operations and productivity. Consultants reclaimed significant time previously spent on manual research, enabling focus on strategic advisory work. Knowledge sharing across practice areas improved dramatically through the AI-organized repository. Client insights became deeper and more actionable with unified analytics. The firm broke its linear scaling model, growing revenue per consultant through AI-augmented productivity. Research cycles that previously took weeks were completed in days, accelerating project delivery and client satisfaction.</p>
+                    </div>
+                    <div class="mt-12 text-center">
+                        <a href="case-studies.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-semibold"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>Back to Case Studies</a>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-brand-50 py-12 border-t border-brand-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Consulting Operations?</h2>
+                    <p class="text-gray-700 mb-6">Let's discuss how AI outsourcing can amplify your team's capabilities</p>
+                    <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">Schedule a Consultation</a>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-gray-900 text-gray-300 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div><h3 class="text-white font-semibold mb-3">Head Office</h3><p class="text-sm">B-8, Indian Airlines Colony,<br />Prakash Nagar, Begumpet,<br />Hyderabad</p></div>
+                    <div><h3 class="text-white font-semibold mb-3">Reach Us</h3><p class="text-sm"><a href="mailto:praveen@telcomet.com" class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135" class="hover:text-brand-400">+91 80088 88135</a></p></div>
+                    <div><h3 class="text-white font-semibold mb-3">Quick Links</h3><div class="flex flex-wrap gap-3 text-sm"><a href="index.html" class="hover:text-brand-400">Home</a><a href="about.html" class="hover:text-brand-400">About</a><a href="case-studies.html" class="hover:text-brand-400">Case Studies</a><a href="contact.html" class="hover:text-brand-400">Contact</a></div></div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script>AOS.init({ duration: 800, once: true })</script>
+</body>
+</html>

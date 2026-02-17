@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Manufacturing Enterprise AI Transformation Case Study | Telcomet</title>
-    <meta name="description"
-        content="How Telcomet helped a manufacturing enterprise achieve 40% reduction in downtime through AI-led digital transformation." />
+    <title>Logistics & Supply Chain Case Study | Telcomet</title>
+    <meta name="description" content="How Telcomet helped a logistics enterprise achieve 35% improvement in on-time deliveries through AI-optimized operations." />
     <link rel="icon" type="image/jpeg" href="logo1.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"] }, colors: { brand: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12" } } } } }</script>
@@ -25,35 +24,27 @@
                 <div class="flex items-center justify-between h-16">
                     <a href="index.html" class="flex items-center gap-3">
                         <img src="logo1.png" alt="Telcomet" class="h-10 w-auto" />
-                        <div class="flex flex-col leading-tight"><span
-                                class="text-sm font-semibold text-brand-600">TELCOMET</span><span
-                                class="text-xs text-gray-600">AI-Led Digital Transformation</span></div>
                     </a>
                     <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
                         <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
                         <div class="nav-dropdown">
-                            <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">IT
-                                Infra &
-                                Security
+                            <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">IT Infra & Security
                                 <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </span>
                             <div class="nav-dropdown-menu">
                                 <div class="nav-dropdown-panel">
                                     <a href="it-infrastructure.html">Enterprise IT Infrastructure</a>
                                     <a href="it-security-services.html">IT Security Services</a>
-                                <a href="why-choose-telcomet.html">Why Choose Telcomet</a>
+                                    <a href="why-choose-telcomet.html">Why Choose Telcomet</a>
                                 </div>
                             </div>
                         </div>
                         <div class="nav-dropdown">
-                            <span class="text-brand-600 font-semibold cursor-pointer flex items-center gap-1">AI
-                                Transformation
+                            <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">AI Transformation
                                 <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </span>
                             <div class="nav-dropdown-menu">
@@ -68,50 +59,31 @@
                         <a href="case-studies.html" class="text-gray-700 hover:text-brand-600">Case Studies</a>
                         <a href="about.html" class="text-gray-700 hover:text-brand-600">About</a>
                     </nav>
-                    <a href="index.html#contact"
-                        class="hidden lg:inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk
-                        to an Expert</a>
+                    <a href="contact.html"
+                        class="hidden lg:inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">Talk to an Expert</a>
                     <button type="button" class="lg:hidden" @click="mobileNavOpen=!mobileNavOpen">
-                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
+                        <svg x-show="!mobileNavOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
+                        <svg x-show="mobileNavOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
-                <!-- Mobile Nav -->
                 <div x-show="mobileNavOpen" x-transition x-cloak class="lg:hidden border-t border-gray-200 py-4">
                     <nav class="flex flex-col gap-2">
-                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Home</a>
-                        <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">IT Infra &
-                            Security</div>
-                        <a href="it-infrastructure.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Enterprise IT Infrastructure</a>
-                        <a href="it-security-services.html"
-                            class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">IT Security Services</a>
-                            <a href="why-choose-telcomet.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                                @click="mobileNavOpen=false">Why Choose Telcomet</a>
-                        <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">AI
-                            Transformation</div>
-                        <a href="ai-automation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">AI Automation</a>
-                        <a href="agentic-ai.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Agentic AI</a>
-                        <a href="ai-outsourcing.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">AI Outsourcing</a>
-                        <a href="ai-digital-transformation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Digital Transformation</a>
-                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Case Studies</a>
-                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">About</a>
+                        <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Home</a>
+                        <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">IT Infra & Security</div>
+                        <a href="it-infrastructure.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Enterprise IT Infrastructure</a>
+                        <a href="it-security-services.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">IT Security Services</a>
+                        <a href="why-choose-telcomet.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Why Choose Telcomet</a>
+                        <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">AI Transformation</div>
+                        <a href="ai-automation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI Automation</a>
+                        <a href="agentic-ai.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Agentic AI</a>
+                        <a href="ai-outsourcing.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">AI Outsourcing</a>
+                        <a href="ai-digital-transformation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Digital Transformation</a>
+                        <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">Case Studies</a>
+                        <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded" @click="mobileNavOpen=false">About</a>
                     </nav>
                 </div>
             </div>
@@ -129,10 +101,8 @@
                     <div
                         class="inline-block bg-brand-100 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
                         CASE STUDY</div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Manufacturing Enterprise
-                    </h1>
-                    <p class="text-xl text-gray-700">AI-driven transformation for multi-plant operations delivering
-                        measurable improvements across manufacturing workflows</p>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Logistics &amp; Supply Chain</h1>
+                    <p class="text-xl text-gray-700">AI-optimized routing, fleet utilization, and shipment visibility at scale delivering measurable improvements across logistics operations</p>
                 </div>
             </section>
 
@@ -141,14 +111,7 @@
                     <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 mb-12">
                         <h2 class="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
                         <p class="text-gray-700 leading-relaxed">
-                            A large manufacturing enterprise engaged Telcomet to digitally transform its multi-plant
-                            operations using AI. The organization faced disconnected production systems, manual planning
-                            processes, limited operational visibility, and rising costs as production volumes increased.
-                            Telcomet introduced AI-driven transformation to unify IT and operational technology data,
-                            optimize production planning, and embed predictive intelligence across manufacturing
-                            workflows. The objective was to improve efficiency, reduce downtime, and enable scalable
-                            production growth while maintaining quality, safety, and cost control across geographically
-                            distributed facilities.
+                            A mid-size logistics and supply chain enterprise engaged Telcomet to digitally transform its operations using AI. The organization managed fleet, warehouse, and order fulfillment across multiple regions with fragmented systems that limited real-time visibility. Manual route planning, reactive maintenance, and disconnected demand signals resulted in missed deliveries, rising costs, and poor fleet utilization. Telcomet deployed AI-driven route optimization, demand forecasting, and unified operational dashboards to create an intelligent, scalable logistics backbone.
                         </p>
                     </div>
 
@@ -165,10 +128,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-1">Disconnected Production Systems
-                                        </h3>
-                                        <p class="text-sm text-gray-600">Production systems across plants leading to
-                                            inconsistent data and reporting</p>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Fragmented Operational Systems</h3>
+                                        <p class="text-sm text-gray-600">Fleet management, warehouse operations, and order systems operated independently</p>
                                     </div>
                                 </div>
                             </div>
@@ -183,9 +144,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-1">Manual Planning & Scheduling</h3>
-                                        <p class="text-sm text-gray-600">Resulting in delays and inefficient resource
-                                            utilization</p>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Manual Route Planning</h3>
+                                        <p class="text-sm text-gray-600">Static routing led to suboptimal delivery schedules and fuel waste</p>
                                     </div>
                                 </div>
                             </div>
@@ -200,9 +160,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-1">Limited Operational Visibility</h3>
-                                        <p class="text-sm text-gray-600">Poor visibility into operations, equipment
-                                            performance, and supply chain risks</p>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Poor Demand Visibility</h3>
+                                        <p class="text-sm text-gray-600">Lack of forecasting capability caused overstocking and stockouts across warehouses</p>
                                     </div>
                                 </div>
                             </div>
@@ -217,9 +176,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-1">Scaling Challenges</h3>
-                                        <p class="text-sm text-gray-600">Increased production meant higher labor and
-                                            operational costs</p>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Fleet Utilization Gaps</h3>
+                                        <p class="text-sm text-gray-600">Reactive maintenance and poor scheduling resulted in underutilized assets</p>
                                     </div>
                                 </div>
                             </div>
@@ -236,9 +194,8 @@
                                         class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
                                         1</div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-2">AI Maturity Assessment</h3>
-                                        <p class="text-gray-700">Comprehensive assessment across IT, OT, and data
-                                            infrastructure to identify high-impact AI opportunities</p>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Logistics Operations Assessment</h3>
+                                        <p class="text-gray-700">End-to-end mapping of fleet, warehouse, and order management workflows</p>
                                     </div>
                                 </div>
                             </div>
@@ -250,10 +207,8 @@
                                         class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
                                         2</div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-2">AI-Powered Process Re-engineering
-                                        </h3>
-                                        <p class="text-gray-700">Redesigned production planning, inventory, and quality
-                                            control workflows with AI integration</p>
+                                        <h3 class="font-semibold text-gray-900 mb-2">AI-Driven Route Optimization</h3>
+                                        <p class="text-gray-700">Dynamic routing algorithms factoring in traffic, weather, delivery windows, and vehicle capacity</p>
                                     </div>
                                 </div>
                             </div>
@@ -265,9 +220,8 @@
                                         class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
                                         3</div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-2">System Integration</h3>
-                                        <p class="text-gray-700">Integrated AI analytics with ERP and shop-floor systems
-                                            for seamless data flow</p>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Demand Forecasting Engine</h3>
+                                        <p class="text-gray-700">Machine learning models predicting order volumes and optimizing inventory allocation</p>
                                     </div>
                                 </div>
                             </div>
@@ -279,9 +233,8 @@
                                         class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
                                         4</div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-2">Predictive Maintenance Models</h3>
-                                        <p class="text-gray-700">Implemented machine learning models to anticipate
-                                            equipment failures and optimize maintenance scheduling</p>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Predictive Fleet Maintenance</h3>
+                                        <p class="text-gray-700">Sensor data analytics to anticipate vehicle maintenance needs and prevent breakdowns</p>
                                     </div>
                                 </div>
                             </div>
@@ -293,10 +246,8 @@
                                         class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
                                         5</div>
                                     <div>
-                                        <h3 class="font-semibold text-gray-900 mb-2">Real-Time Performance Dashboards
-                                        </h3>
-                                        <p class="text-gray-700">AI-enabled dashboards providing real-time plant
-                                            monitoring and operational insights</p>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Unified Operations Dashboard</h3>
+                                        <p class="text-gray-700">Real-time visibility across fleet, shipments, and warehouse performance metrics</p>
                                     </div>
                                 </div>
                             </div>
@@ -307,26 +258,21 @@
                         <h2 class="text-2xl font-bold text-gray-900 mb-6">Business Impact & ROI</h2>
                         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                             <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
-                                <div class="text-4xl font-bold text-brand-600 mb-2">40%</div>
-                                <p class="font-semibold text-gray-900">Reduction in Unplanned Downtime</p>
-                            </div>
-                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
-                                <div class="text-4xl font-bold text-brand-600 mb-2">25%</div>
-                                <p class="font-semibold text-gray-900">Improvement in Production Efficiency</p>
+                                <div class="text-4xl font-bold text-brand-600 mb-2">35%</div>
+                                <p class="font-semibold text-gray-900">Improvement in On-Time Deliveries</p>
                             </div>
                             <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
                                 <div class="text-4xl font-bold text-brand-600 mb-2">30%</div>
-                                <p class="font-semibold text-gray-900">Reduction in Inventory Holding Costs</p>
+                                <p class="font-semibold text-gray-900">Reduction in Transport Costs</p>
                             </div>
                             <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
-                                <div class="text-4xl font-bold text-brand-600 mb-2">100%</div>
-                                <p class="font-semibold text-gray-900">Faster Supply Chain Response</p>
+                                <div class="text-4xl font-bold text-brand-600 mb-2">25%</div>
+                                <p class="font-semibold text-gray-900">Improvement in Fleet Utilization</p>
                             </div>
-                        </div>
-                        <div class="mt-6 bg-brand-50 rounded-xl p-6 border border-brand-200">
-                            <h3 class="font-semibold text-gray-900 mb-2">Additional Benefits</h3>
-                            <p class="text-gray-700">Ability to scale production volumes without increasing workforce
-                                size, improving margins and operational resilience</p>
+                            <div class="bg-white border-2 border-brand-500 rounded-xl p-6 text-center">
+                                <div class="text-4xl font-bold text-brand-600 mb-2">2x</div>
+                                <p class="font-semibold text-gray-900">Faster Order Fulfillment</p>
+                            </div>
                         </div>
                     </div>
 
@@ -334,14 +280,7 @@
                         data-aos="fade-up">
                         <h2 class="text-2xl font-bold mb-4">Final Outcome</h2>
                         <p class="leading-relaxed">
-                            AI-led transformation delivered measurable improvements across manufacturing operations.
-                            Unplanned downtime was significantly reduced through predictive maintenance, production
-                            efficiency improved, and inventory levels were optimized using intelligent forecasting.
-                            Leadership gained real-time visibility into plant performance, enabling faster corrective
-                            actions and better capacity planning. The organization successfully scaled production
-                            volumes without proportional increases in labor or overhead, improving margins and
-                            operational resilience. AI became a foundational capability supporting continuous
-                            improvement, operational stability, and long-term manufacturing excellence.
+                            AI-led transformation delivered measurable improvements across logistics operations. On-time delivery rates improved significantly through dynamic route optimization, transport costs decreased with fuel-efficient planning and load optimization, and fleet utilization increased through predictive maintenance and smarter scheduling. Leadership gained real-time visibility into shipment status and warehouse performance. The organization scaled operations to handle higher volumes without proportional increases in fleet size or personnel.
                         </p>
                     </div>
 
@@ -360,13 +299,10 @@
 
             <section class="bg-brand-50 py-12 border-t border-brand-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Manufacturing Operations?
-                    </h2>
-                    <p class="text-gray-700 mb-6">Let's discuss how AI can optimize your production and drive measurable
-                        ROI</p>
-                    <a href="index.html#contact"
-                        class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">Schedule
-                        a Consultation</a>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Logistics Operations?</h2>
+                    <p class="text-gray-700 mb-6">Let's discuss how AI can optimize your supply chain and drive measurable ROI</p>
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-base font-semibold text-white hover:bg-brand-600 shadow-lg">Schedule a Consultation</a>
                 </div>
             </section>
         </main>
@@ -380,23 +316,14 @@
                     </div>
                     <div>
                         <h3 class="text-white font-semibold mb-3">Reach Us</h3>
-                        <p class="text-sm"><a href="mailto:praveen@telcomet.com"
-                                class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135"
-                                class="hover:text-brand-400">+91 80088 88135</a></p>
+                        <p class="text-sm"><a href="mailto:praveen@telcomet.com" class="hover:text-brand-400">praveen@telcomet.com</a><br /><a href="tel:+918008888135" class="hover:text-brand-400">+91 80088 88135</a></p>
                     </div>
                     <div>
                         <h3 class="text-white font-semibold mb-3">Quick Links</h3>
-                        <div class="flex flex-wrap gap-3 text-sm"><a href="index.html"
-                                class="hover:text-brand-400">Home</a><a href="about.html"
-                                class="hover:text-brand-400">About</a><a href="ai-automation.html"
-                                class="hover:text-brand-400">AI Automation</a><a href="agentic-ai.html"
-                                class="hover:text-brand-400">Agentic AI</a><a href="ai-outsourcing.html"
-                                class="hover:text-brand-400">AI Outsourcing</a><a href="ai-digital-transformation.html"
-                                class="hover:text-brand-400">Digital Transformation</a></div>
+                        <div class="flex flex-wrap gap-3 text-sm"><a href="index.html" class="hover:text-brand-400">Home</a><a href="about.html" class="hover:text-brand-400">About</a><a href="case-studies.html" class="hover:text-brand-400">Case Studies</a><a href="contact.html" class="hover:text-brand-400">Contact</a></div>
                     </div>
                 </div>
-                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All
-                    rights reserved.</div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">© 2026 Telcomet. All rights reserved.</div>
             </div>
         </footer>
     </div>

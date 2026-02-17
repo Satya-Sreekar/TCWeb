@@ -28,7 +28,6 @@
                     </a>
                     <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
                         <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
-                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
                         <div class="nav-dropdown">
                             <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">IT
                                 Infra & Security
@@ -58,6 +57,7 @@
                                     <a href="ai-automation.html">AI Automation</a>
                                     <a href="agentic-ai.html">Agentic AI</a>
                                     <a href="ai-outsourcing.html">AI Outsourcing</a>
+                                    <a href="ai-digital-transformation.html">Digital Transformation</a>
                                 </div>
                             </div>
                         </div>
@@ -87,8 +87,6 @@
                     <nav class="flex flex-col gap-2">
                         <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Home</a>
-                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Services</a>
                         <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">IT Infra &
                             Security</div>
                         <a href="it-infrastructure.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
@@ -106,6 +104,8 @@
                             @click="mobileNavOpen=false">Agentic AI</a>
                         <a href="ai-outsourcing.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">AI Outsourcing</a>
+                        <a href="ai-digital-transformation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Digital Transformation</a>
                         <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Case Studies</a>
                         <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
@@ -158,130 +158,259 @@
                     </div>
                 </div>
             </section>
-            <section class="border-b border-slate-200 bg-slate-50">
+            <!-- What We Do -->
+            <section class="border-b border-slate-200 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-                    <div class="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] items-start">
-                        <div data-aos="fade-up" data-aos-duration="800">
-                            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
-                                What We Do
-                            </h2>
-                            <div class="mt-4 space-y-4">
-                                <div>
-                                    <h3 class="text-sm font-semibold text-slate-900">IT Infrastructure & Cyber Security</h3>
-                                    <p class="mt-1 text-sm text-slate-600">We build resilient IT foundations and security frameworks that protect digital assets, ensure compliance, and enable uninterrupted business operations across on-premise, hybrid, and cloud environments.</p>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-semibold text-slate-900">AI & ML Solutions</h3>
-                                    <p class="mt-1 text-sm text-slate-600">Our AI/ML division helps organizations automate intelligently, unlock data-driven insights, and deploy AI responsibly—through Agentic AI, automation, predictive analytics, and AI outsourcing models.</p>
-                                </div>
+                    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">What We Do</h2>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600">We deliver two core pillars of enterprise technology transformation.</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
                             </div>
-
-                            <h2 class="mt-8 text-xl font-semibold text-slate-900">Our Approach</h2>
-                            <div class="mt-4 grid gap-4 sm:grid-cols-3">
-                                <div class="rounded-2xl border border-brand-400/30 bg-gradient-to-br from-brand-500/10 via-slate-50/70 to-brand-500/5 p-4">
-                                    <h3 class="text-sm font-semibold text-slate-900">Outcome-Driven Consulting</h3>
-                                    <p class="mt-2 text-xs text-slate-600">Every engagement begins with understanding business outcomes, not just technology requirements. Our solutions are designed to deliver measurable ROI, risk reduction, and operational efficiency.</p>
-                                </div>
-                                <div class="rounded-2xl border border-slate-200 bg-slate-100/80 p-4">
-                                    <h3 class="text-sm font-semibold text-slate-900">Security-First Engineering</h3>
-                                    <p class="mt-2 text-xs text-slate-600">Security is embedded into every layer—whether infrastructure, applications, data, or AI—ensuring enterprises remain protected and compliant as they scale.</p>
-                                </div>
-                                <div class="rounded-2xl border border-slate-200 bg-slate-100/80 p-4">
-                                    <h3 class="text-sm font-semibold text-slate-900">Scalable & Future-Ready Design</h3>
-                                    <p class="mt-2 text-xs text-slate-600">We architect solutions that adapt to changing business needs, regulatory requirements, and technology evolution—supporting long-term growth without constant rework.</p>
-                                </div>
-                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">IT Infrastructure & Cyber Security</h3>
+                            <p class="mt-2 text-xs text-slate-600">We build resilient IT foundations and security frameworks that protect digital assets, ensure compliance, and enable uninterrupted business operations across on-premise, hybrid, and cloud environments.</p>
                         </div>
-
-                        <div class="space-y-4 rounded-3xl border border-slate-200 bg-slate-100/60 p-5 sm:p-6"
-                            data-aos="fade-left" data-aos-duration="800" data-aos-delay="60">
-                            <h3 class="text-sm font-semibold text-slate-900">
-                                Markets We Serve
-                            </h3>
-                            <p class="text-xs sm:text-sm text-slate-600">We support enterprises across:</p>
-                            <ul class="space-y-1 text-xs sm:text-sm text-slate-700">
-                                <li>• Banking, Finance & Insurance</li>
-                                <li>• Real Estate & Infrastructure</li>
-                                <li>• Digital Media & Technology Services</li>
-                                <li>• Manufacturing & Logistics</li>
-                                <li>• Healthcare & Education</li>
-                                <li>• Professional & Consulting Services</li>
-                            </ul>
-                            <p class="text-xs text-slate-600">Our cross-industry experience enables us to apply proven patterns while tailoring solutions to each organization's context.</p>
-
-                            <dl class="mt-4 grid grid-cols-2 gap-3 text-xs sm:text-sm">
-                                <div class="rounded-2xl bg-slate-50/60 p-3 border border-slate-200">
-                                    <dt class="text-slate-500 text-[0.7rem] uppercase tracking-wide">Reach us</dt>
-                                    <dd class="mt-1 text-slate-900"><a href="mailto:praveen@telcomet.com" class="hover:text-brand-600">praveen@telcomet.com</a></dd>
-                                </div>
-                                <div class="rounded-2xl bg-slate-50/60 p-3 border border-slate-200">
-                                    <dt class="text-slate-500 text-[0.7rem] uppercase tracking-wide">Call us</dt>
-                                    <dd class="mt-1 text-slate-900"><a href="tel:+918008888135" class="hover:text-brand-600">+91 80088 88135</a></dd>
-                                </div>
-                            </dl>
-                            <p class="text-xs text-slate-600">Head Office: B-8, Indian Airlines Colony, Prakash Nagar, Begumpet, Hyderabad</p>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">AI & ML Solutions</h3>
+                            <p class="mt-2 text-xs text-slate-600">Our AI/ML division helps organizations automate intelligently, unlock data-driven insights, and deploy AI responsibly—through Agentic AI, automation, predictive analytics, and AI outsourcing models.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12 mb-8" data-aos="fade-up">
+                        <h3 class="text-xl font-semibold text-slate-900">Our Approach</h3>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Outcome-Driven Consulting</h3>
+                            <p class="mt-2 text-xs text-slate-600">Every engagement begins with understanding business outcomes, not just technology requirements. Our solutions are designed to deliver measurable ROI, risk reduction, and operational efficiency.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Security-First Engineering</h3>
+                            <p class="mt-2 text-xs text-slate-600">Security is embedded into every layer—whether infrastructure, applications, data, or AI—ensuring enterprises remain protected and compliant as they scale.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Scalable & Future-Ready Design</h3>
+                            <p class="mt-2 text-xs text-slate-600">We architect solutions that adapt to changing business needs, regulatory requirements, and technology evolution—supporting long-term growth without constant rework.</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- Markets We Serve -->
             <section class="border-b border-slate-200 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Markets We Serve</h2>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600">We support enterprises across diverse industries, applying proven patterns while tailoring solutions to each organization's context.</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Banking, Finance & Insurance</h3>
+                            <p class="mt-2 text-xs text-slate-600">Secure infrastructure, compliance-ready frameworks, and AI-driven insights for financial institutions navigating evolving regulatory landscapes.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Real Estate & Infrastructure</h3>
+                            <p class="mt-2 text-xs text-slate-600">Scalable IT foundations and smart building technologies that support property management, development operations, and portfolio growth.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Digital Media & Technology Services</h3>
+                            <p class="mt-2 text-xs text-slate-600">High-performance infrastructure and AI capabilities enabling media platforms and tech companies to innovate and scale rapidly.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Manufacturing & Logistics</h3>
+                            <p class="mt-2 text-xs text-slate-600">Operational technology integration, supply chain automation, and secure connectivity for manufacturing and logistics enterprises.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Healthcare & Education</h3>
+                            <p class="mt-2 text-xs text-slate-600">Compliant, resilient IT environments and data-driven solutions supporting patient care, institutional operations, and digital learning.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-semibold text-slate-900">Professional & Consulting Services</h3>
+                            <p class="mt-2 text-xs text-slate-600">Streamlined IT operations, secure collaboration tools, and intelligent automation for consulting firms and professional service organizations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Enterprises Choose Telcomet -->
+            <section class="border-b border-slate-200 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
                     <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="800">
                         <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Why Enterprises Choose Telcomet</h2>
                     </div>
                     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="rounded-2xl border border-slate-200 bg-slate-100/80 p-6">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
                             <h3 class="text-sm font-semibold text-slate-900">Proven Enterprise Experience</h3>
                             <p class="mt-2 text-xs text-slate-600">Nearly a decade of delivering complex IT and AI solutions across industries and geographies.</p>
                         </div>
-                        <div class="rounded-2xl border border-slate-200 bg-slate-100/80 p-6">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
                             <h3 class="text-sm font-semibold text-slate-900">Trusted by 250+ Clients</h3>
                             <p class="mt-2 text-xs text-slate-600">Long-term relationships built on consistent delivery, transparency, and measurable outcomes.</p>
                         </div>
-                        <div class="rounded-2xl border border-slate-200 bg-slate-100/80 p-6">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
                             <h3 class="text-sm font-semibold text-slate-900">Strong OEM & Technology Ecosystem</h3>
                             <p class="mt-2 text-xs text-slate-600">Certified partnerships with leading global OEMs ensure best-practice implementations and lifecycle support.</p>
                         </div>
-                        <div class="rounded-2xl border border-slate-200 bg-slate-100/80 p-6">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
                             <h3 class="text-sm font-semibold text-slate-900">Dedicated AI & Security Expertise</h3>
                             <p class="mt-2 text-xs text-slate-600">A specialized AI/ML team and deep cyber security capabilities ensure innovation without compromising security.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="border-b border-slate-200 bg-slate-50/60">
+
+            <!-- Our People & Expertise -->
+            <section class="border-b border-slate-200 bg-slate-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-                    <div data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="800">
                         <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Our People & Expertise</h2>
-                        <p class="mt-4 text-sm sm:text-base text-slate-600">
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 max-w-3xl mx-auto">
                             Telcomet is powered by multidisciplinary teams comprising infrastructure specialists, security experts, AI architects, data scientists, and domain consultants. Our people bring deep technical expertise combined with business understanding—ensuring solutions are practical, secure, and impactful.
-                        </p>
-                    </div>
-                    <div class="mt-10" data-aos="fade-up" data-aos-duration="800">
-                        <h2 class="text-xl font-semibold text-slate-900">Business Impact We Deliver</h2>
-                        <ul class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm text-slate-700">
-                            <li class="flex gap-2"><span class="text-brand-500">•</span>30–40% reduction in operational costs</li>
-                            <li class="flex gap-2"><span class="text-brand-500">•</span>40–60% improvement in system reliability and security posture</li>
-                            <li class="flex gap-2"><span class="text-brand-500">•</span>50–70% faster time-to-value for digital initiatives</li>
-                            <li class="flex gap-2"><span class="text-brand-500">•</span>Consistent, predictable ROI across technology investments</li>
-                        </ul>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-brand-400/30 bg-brand-500/5 p-6" data-aos="fade-up" data-aos-duration="800">
-                        <h2 class="text-xl font-semibold text-slate-900">Our Commitment</h2>
-                        <p class="mt-3 text-sm text-slate-600">
-                            At Telcomet, success is measured not by project completion—but by the long-term value we create for our customers. We remain accountable beyond go-live, continuously optimizing solutions to ensure they remain relevant, secure, and aligned with business goals.
                         </p>
                     </div>
                 </div>
             </section>
+
+            <!-- Business Impact We Deliver -->
+            <section class="border-b border-slate-200 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Business Impact We Deliver</h2>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600">Measurable outcomes that drive sustainable enterprise value.</p>
+                    </div>
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-2xl font-bold text-brand-600">30–40%</p>
+                            <h3 class="mt-2 text-sm font-semibold text-slate-900">Cost Reduction</h3>
+                            <p class="mt-1 text-xs text-slate-600">Reduction in operational costs through optimized infrastructure and automation.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-2xl font-bold text-brand-600">40–60%</p>
+                            <h3 class="mt-2 text-sm font-semibold text-slate-900">Reliability & Security</h3>
+                            <p class="mt-1 text-xs text-slate-600">Improvement in system reliability and overall security posture.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                            <p class="text-2xl font-bold text-brand-600">50–70%</p>
+                            <h3 class="mt-2 text-sm font-semibold text-slate-900">Faster Time-to-Value</h3>
+                            <p class="mt-1 text-xs text-slate-600">Faster time-to-value for digital transformation initiatives.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white mb-4">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-2xl font-bold text-brand-600">Predictable</p>
+                            <h3 class="mt-2 text-sm font-semibold text-slate-900">Consistent ROI</h3>
+                            <p class="mt-1 text-xs text-slate-600">Consistent, predictable ROI across all technology investments.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Commitment + CTA -->
             <section class="border-b border-slate-200 bg-gradient-to-br from-brand-500/10 via-white to-slate-50">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div class="text-center" data-aos="zoom-in" data-aos-duration="800">
-                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Let's Build the Future Together</h2>
-                        <p class="mt-4 text-sm sm:text-base text-slate-600">Whether you are modernizing IT foundations, strengthening cyber security, or adopting AI at scale, Telcomet is committed to being your trusted technology partner—today and in the future.</p>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                    <div class="text-center max-w-3xl mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">Our Commitment</h2>
+                        <p class="mt-4 text-sm sm:text-base text-slate-600">
+                            At Telcomet, success is measured not by project completion—but by the long-term value we create for our customers. We remain accountable beyond go-live, continuously optimizing solutions to ensure they remain relevant, secure, and aligned with business goals.
+                        </p>
+                        <p class="mt-6 text-sm sm:text-base text-slate-600">
+                            Whether you are modernizing IT foundations, strengthening cyber security, or adopting AI at scale, Telcomet is committed to being your trusted technology partner—today and in the future.
+                        </p>
                         <div class="mt-8 flex flex-wrap justify-center gap-4">
                             <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:bg-brand-600">Talk to Our Experts</a>
-                            <a href="services.html" class="inline-flex items-center justify-center rounded-full border border-slate-200 px-8 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50">Explore Our Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -305,8 +434,7 @@
                         <h3 class="text-sm font-semibold text-slate-900">Quick Links</h3>
                         <div class="mt-3 flex flex-wrap gap-3 text-xs text-slate-500"><a href="index.html"
                                 class="hover:text-brand-600">Home</a><a href="about.html"
-                                class="hover:text-brand-600">About</a><a href="services.html"
-                                class="hover:text-brand-600">Services</a><a href="contact.html"
+                                class="hover:text-brand-600">About</a><a href="contact.html"
                                 class="hover:text-brand-600">Contact</a></div>
                     </div>
                 </div>

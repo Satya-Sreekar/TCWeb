@@ -64,7 +64,6 @@
                     </a>
                     <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
                         <a href="index.html" class="text-gray-700 hover:text-brand-600">Home</a>
-                        <a href="services.html" class="text-gray-700 hover:text-brand-600">Services</a>
                         <div class="nav-dropdown">
                             <span class="text-gray-700 hover:text-brand-600 cursor-pointer flex items-center gap-1">IT
                                 Infra & Security
@@ -94,6 +93,7 @@
                                     <a href="ai-automation.html">AI Automation</a>
                                     <a href="agentic-ai.html">Agentic AI</a>
                                     <a href="ai-outsourcing.html">AI Outsourcing</a>
+                                    <a href="ai-digital-transformation.html">Digital Transformation</a>
                                 </div>
                             </div>
                         </div>
@@ -122,8 +122,6 @@
                     <nav class="flex flex-col gap-2">
                         <a href="index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Home</a>
-                        <a href="services.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
-                            @click="mobileNavOpen=false">Services</a>
                         <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-brand-600">IT Infra &
                             Security</div>
                         <a href="it-infrastructure.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
@@ -141,6 +139,8 @@
                             @click="mobileNavOpen=false">Agentic AI</a>
                         <a href="ai-outsourcing.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">AI Outsourcing</a>
+                        <a href="ai-digital-transformation.html" class="pl-6 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
+                            @click="mobileNavOpen=false">Digital Transformation</a>
                         <a href="case-studies.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
                             @click="mobileNavOpen=false">Case Studies</a>
                         <a href="about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded"
@@ -188,7 +188,7 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid gap-8 lg:grid-cols-3">
                         <!-- Manufacturing -->
-                        <div class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer"
+                        <a href="case-study-manufacturing.html" class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer block"
                             data-aos="fade-up" data-aos-delay="100">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
@@ -252,10 +252,10 @@
                                         inventory holding costs</div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Healthcare -->
-                        <div class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer"
+                        <a href="case-study-healthcare.html" class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer block"
                             data-aos="fade-up" data-aos-delay="200">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
@@ -320,10 +320,10 @@
                                         operational costs</div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Logistics -->
-                        <div class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer"
+                        <a href="case-study-logistics.html" class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition cursor-pointer block"
                             data-aos="fade-up" data-aos-delay="300">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
@@ -388,7 +388,7 @@
                                         in fleet utilization</div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -402,8 +402,8 @@
                     </div>
                     <div class="grid gap-8 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
                         <!-- Gold Lending Institution -->
-                        <div
-                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-gold-lending.html"
+                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -428,14 +428,14 @@
                                     <div class="text-xs text-gray-500">Faster loan approvals</div>
                                 </div>
                             </div>
-                            <a href="ai-automation.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
 
                         <!-- Education Group -->
-                        <div
-                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-education.html"
+                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -460,14 +460,14 @@
                                     <div class="text-xs text-gray-500">Faster admissions processing</div>
                                 </div>
                             </div>
-                            <a href="ai-automation.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
 
                         <!-- Energy & Utilities Provider -->
-                        <div
-                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-energy.html"
+                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -492,10 +492,10 @@
                                     <div class="text-xs text-gray-500">Faster service requests</div>
                                 </div>
                             </div>
-                            <a href="ai-automation.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -509,8 +509,8 @@
                     </div>
                     <div class="grid gap-8 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
                         <!-- Retail Chain -->
-                        <div
-                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-retail.html"
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -535,14 +535,14 @@
                                     <div class="text-xs text-gray-500">Faster response times</div>
                                 </div>
                             </div>
-                            <a href="agentic-ai.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
 
                         <!-- Telecommunications -->
-                        <div
-                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-telecommunications.html"
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -567,14 +567,14 @@
                                     <div class="text-xs text-gray-500">Reduction in NOC costs</div>
                                 </div>
                             </div>
-                            <a href="agentic-ai.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
 
                         <!-- Hospitality Group -->
-                        <div
-                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-hospitality.html"
+                            class="group bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -599,10 +599,10 @@
                                     <div class="text-xs text-gray-500">Increase in satisfaction scores</div>
                                 </div>
                             </div>
-                            <a href="agentic-ai.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -617,8 +617,8 @@
                     </div>
                     <div class="grid gap-8 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
                         <!-- Real Estate -->
-                        <div
-                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-real-estate.html"
+                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -643,14 +643,14 @@
                                     <div class="text-xs text-gray-500">Faster request handling</div>
                                 </div>
                             </div>
-                            <a href="ai-outsourcing.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
 
                         <!-- Media & Digital Entertainment -->
-                        <div
-                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-media.html"
+                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -675,14 +675,14 @@
                                     <div class="text-xs text-gray-500">Higher engagement</div>
                                 </div>
                             </div>
-                            <a href="ai-outsourcing.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
 
                         <!-- Professional Services -->
-                        <div
-                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition">
+                        <a href="case-study-professional-services.html"
+                            class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-500 hover:shadow-lg transition block cursor-pointer">
                             <div class="flex items-center gap-3 mb-6">
                                 <div
                                     class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center group-hover:bg-brand-500 transition">
@@ -707,10 +707,10 @@
                                     <div class="text-xs text-gray-500">Faster research cycles</div>
                                 </div>
                             </div>
-                            <a href="ai-outsourcing.html#case-studies"
-                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">Read
-                                more →</a>
-                        </div>
+                            <span
+                                class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700">Read
+                                full case study →</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -756,10 +756,10 @@
                         <div class="mt-3 flex flex-wrap gap-3 text-xs text-slate-500">
                             <a href="index.html" class="hover:text-brand-600">Home</a>
                             <a href="about.html" class="hover:text-brand-600">About</a>
-                            <a href="services.html" class="hover:text-brand-600">Services</a>
                             <a href="ai-automation.html" class="hover:text-brand-600">AI Automation</a>
                             <a href="agentic-ai.html" class="hover:text-brand-600">Agentic AI</a>
                             <a href="ai-outsourcing.html" class="hover:text-brand-600">AI Outsourcing</a>
+                            <a href="ai-digital-transformation.html" class="hover:text-brand-600">Digital Transformation</a>
                             <a href="case-studies.html" class="hover:text-brand-600">Case Studies</a>
                             <a href="contact.html" class="hover:text-brand-600">Contact</a>
                         </div>
